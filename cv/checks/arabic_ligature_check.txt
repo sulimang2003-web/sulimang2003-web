@@ -1,0 +1,14 @@
+  ok    absent:  االصطناعي
+  ok    absent:  اآللي
+  ok    absent:  األ
+  ok    absent:  اإل
+  ok    absent:  اآل
+  ok    absent:  والء
+  ok    absent:  المقاوالت
+  ok    present: الذكاء الاصطناعي
+  ok    present: التعلم الآلي
+  ok    present: الأمنية
+  ok    present: الإنجليزية
+  ok    present: الآن
+  ok    present: ولاء
+RESULT: PASS

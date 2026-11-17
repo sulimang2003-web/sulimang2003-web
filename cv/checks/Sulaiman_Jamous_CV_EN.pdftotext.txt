@@ -1,0 +1,67 @@
+Sulaiman Jamous
+AI Developer | Computer Engineering Graduate
+Riyadh, Saudi Arabia | +966 54 108 3813 | sulimang2003@gmail.com | linkedin.com/in/sulaiman-jamous-2699321a3
+
+SUMMARY
+Computer Engineering graduate from Üsküdar University (2026) specializing in artificial intelligence and generative
+AI. Experienced in Python, machine learning, workflow automation with n8n, and SaaS platform development.
+Seeking an AI Developer role in Saudi Arabia.
+
+EXPERIENCE
+Sales Representative, Jaykum (Tech Solutions for Restaurants and Cafés), Riyadh
+
+October 2026 – Present
+
+Presented technology solutions, including point-of-sale, ordering, and other systems, to restaurant and café
+owners.
+Hardware and Software Trainee, Al-Sanduq Al-Amen Security Company, Riyadh
+
+June 2024 – February 2025
+
+Installed and maintained security devices and their software for government projects.
+Warehouse Keeper, Al-Jameel Optics, Riyadh
+
+2020 – 2021
+
+Managed inventory and stock records.
+
+FREELANCE
+Lamha Tech, Freelance
+
+Present
+
+Develop websites, automation, and booking systems for small businesses.
+Clients: Al-Sanduq Al-Amen Security Company, Al-Jameel Optics, Thalatha Funoon Contracting.
+Built a responsive Arabic website for Thalatha Funoon Contracting using HTML, CSS, and JavaScript.
+
+PROJECTS
+AI Job Market Analysis | Python, pandas, scikit-learn, FastAPI
+Analyzed AI job postings and matched resumes to jobs using machine learning.
+WhatsApp Subscription Renewal Reminders | n8n, WhatsApp Cloud API, Supabase, PostgreSQL, Hetzner
+Automated WhatsApp reminders sent before subscription expiry, with a manual approval queue.
+Digital Loyalty SaaS Platform, Co-Founder | Apple Wallet, Google Wallet, Supabase
+Mobile digital loyalty cards for cafés, salons, and car washes.
+
+EDUCATION
+B.Sc. in Computer Engineering, Üsküdar University, Istanbul, Turkey
+
+SKILLS
+Programming: Python, JavaScript, HTML, CSS
+AI and Data: Machine Learning, scikit-learn, pandas, Data Analysis
+Backend and Integrations: FastAPI, WhatsApp Cloud API, Apple Wallet, Google Wallet
+Automation: n8n, Workflow Automation
+Databases and Hosting: Supabase, PostgreSQL, Hetzner
+Hardware: Security Systems Installation and Maintenance
+
+CERTIFICATIONS
+Introduction to Generative AI, Google Cloud (Coursera), 2026
+AI Essentials, Google (Coursera), 2026
+Introduction to AI, Google (Coursera), 2026
+Python for Data Science, AI and Development, IBM (Coursera), 2026
+
+LANGUAGES
+Arabic (Native), English (Good), Turkish (Advanced)
+
+2026
+
+
