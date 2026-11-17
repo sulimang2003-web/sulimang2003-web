@@ -111,6 +111,14 @@ def main(src, dst):
             gdef.GlyphClassDef.classDefs[z] = 1
     font.setGlyphOrder(order)
     font["maxp"].numGlyphs = len(order)
+    # Drop Arabic presentation-form code points (U+FB50-FDFF, U+FE70-FEFF) from
+    # the cmap. Chrome writes a glyph's cmap code point into the PDF's
+    # ToUnicode table when it has one, so contextual glyphs were extracted by
+    # pypdf/pdfminer as presentation forms (e.g. U+FEFB) instead of letters.
+    for t in font["cmap"].tables:
+        for cp in [cp for cp in t.cmap if 0xFB50 <= cp <= 0xFDFF or 0xFE70 <= cp <= 0xFEFF]:
+            del t.cmap[cp]
+
     # OFL: a modified font must not use the Reserved Font Name ("Plex").
     for rec in font["name"].names:
         if rec.nameID in (1, 3, 4, 6, 16, 17, 18, 21):

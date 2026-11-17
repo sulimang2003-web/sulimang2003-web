@@ -20,16 +20,16 @@ Sales Representative
 Skills
 Python
 
+Presented technology solutions, including point-of-sale, ordering, and other
+systems, to restaurant and café owners.
+
 TypeScript
+
+JavaScript
 
 HTML
 
 CSS
-
-JavaScript
-
-Presented technology solutions, including point-of-sale, ordering, and other
-systems, to restaurant and café owners.
 
 Hardware & Software Trainee
 

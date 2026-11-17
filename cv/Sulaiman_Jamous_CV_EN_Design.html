@@ -42,8 +42,8 @@ aside h3::after{content:"";flex:1;height:1px;background:rgba(196,154,82,.45)}
 .ltr{direction:ltr;unicode-bidi:isolate}
 .skgroup{margin-bottom:2.4mm}
 .skgroup h4{font-size:8.6pt;font-weight:600;color:#fff;margin-bottom:1.3mm}
-.chips{display:flex;flex-wrap:wrap;gap:1.3mm}
-.chips span{border:1px solid rgba(217,189,138,.55);border-radius:10px;padding:.2mm 2.3mm;font-size:7.7pt;color:#e8ebf1;line-height:1.6}
+.chips{line-height:0;margin-bottom:-1.3mm}
+.chips span{display:inline-block;margin:0 0 1.3mm;margin-inline-end:1mm;border:1px solid rgba(217,189,138,.55);border-radius:10px;padding:.2mm 2.3mm;font-size:7.7pt;color:#e8ebf1;line-height:1.6}
 .langs{list-style:none;display:flex;flex-direction:column;gap:1.8mm;font-size:8.6pt}
 .langs li{display:flex;justify-content:space-between;align-items:center}
 .langs small{color:#aeb6c6;font-size:7.6pt}
@@ -101,11 +101,11 @@ section h2::after{content:"";flex:1;height:1px;background:var(--line)}
 
   <div>
     <h3>Skills</h3>
-    <div class="skgroup"><h4>Programming</h4><div class="chips"><span>Python</span><span>TypeScript</span><span>JavaScript</span><span>HTML</span><span>CSS</span></div></div>
-    <div class="skgroup"><h4>AI &amp; Data</h4><div class="chips"><span>Machine Learning</span><span>scikit-learn</span><span>pandas</span><span>Data Analysis</span></div></div>
-    <div class="skgroup"><h4>Backend &amp; Integrations</h4><div class="chips"><span>FastAPI</span><span>WhatsApp Cloud API</span><span>Apple Wallet</span><span>Google Wallet</span><span>PWA</span><span>Capacitor</span></div></div>
-    <div class="skgroup"><h4>Automation</h4><div class="chips"><span>n8n</span><span>Workflow Automation</span></div></div>
-    <div class="skgroup"><h4>Databases &amp; Hosting</h4><div class="chips"><span>Supabase</span><span>PostgreSQL</span><span>Hetzner</span></div></div>
+    <div class="skgroup"><h4>Programming</h4><div class="chips"><span>Python</span> <span>TypeScript</span> <span>JavaScript</span> <span>HTML</span> <span>CSS</span></div></div>
+    <div class="skgroup"><h4>AI &amp; Data</h4><div class="chips"><span>Machine Learning</span> <span>scikit-learn</span> <span>pandas</span> <span>Data Analysis</span></div></div>
+    <div class="skgroup"><h4>Backend &amp; Integrations</h4><div class="chips"><span>FastAPI</span> <span>WhatsApp Cloud API</span> <span>Apple Wallet</span> <span>Google Wallet</span> <span>PWA</span> <span>Capacitor</span></div></div>
+    <div class="skgroup"><h4>Automation</h4><div class="chips"><span>n8n</span> <span>Workflow Automation</span></div></div>
+    <div class="skgroup"><h4>Databases &amp; Hosting</h4><div class="chips"><span>Supabase</span> <span>PostgreSQL</span> <span>Hetzner</span></div></div>
     <div class="skgroup" style="margin-bottom:0"><h4>Hardware</h4><div class="chips"><span>Security Systems Installation &amp; Maintenance</span></div></div>
   </div>
 
@@ -146,17 +146,17 @@ section h2::after{content:"";flex:1;height:1px;background:var(--line)}
     <h2>Experience</h2>
     <div class="tl">
       <div class="item">
-        <div class="ihead"><h3>Sales Representative</h3><span class="date">Oct 2026 – Present</span></div>
+        <div class="ihead"><h3>Sales Representative&nbsp;</h3><span class="date">Oct 2026 – Present</span></div>
         <div class="org">Jaykum — Tech Solutions for Restaurants &amp; Cafés · Riyadh</div>
         <ul><li>Presented technology solutions, including point-of-sale, ordering, and other systems, to restaurant and café owners.</li></ul>
       </div>
       <div class="item">
-        <div class="ihead"><h3>Hardware &amp; Software Trainee</h3><span class="date">Jun 2024 – Feb 2025</span></div>
+        <div class="ihead"><h3>Hardware &amp; Software Trainee&nbsp;</h3><span class="date">Jun 2024 – Feb 2025</span></div>
         <div class="org">Al-Sanduq Al-Amen Security Company · Riyadh</div>
         <ul><li>Installed and maintained security devices and their software for government projects.</li></ul>
       </div>
       <div class="item">
-        <div class="ihead"><h3>Warehouse Keeper</h3><span class="date">2020 – 2021</span></div>
+        <div class="ihead"><h3>Warehouse Keeper&nbsp;</h3><span class="date">2020 – 2021</span></div>
         <div class="org">Al-Jameel Optics · Riyadh</div>
         <ul><li>Managed inventory and stock records.</li></ul>
       </div>
@@ -167,7 +167,7 @@ section h2::after{content:"";flex:1;height:1px;background:var(--line)}
     <h2>Freelance</h2>
     <div class="tl">
       <div class="item">
-        <div class="ihead"><h3>Lamha Tech</h3><span class="date">Present</span></div>
+        <div class="ihead"><h3>Lamha Tech&nbsp;</h3><span class="date">Present</span></div>
         <div class="org">Websites, automation, and booking systems for small businesses</div>
         <ul>
           <li>Clients: Al-Sanduq Al-Amen Security Company · Al-Jameel Optics · Thalatha Funoon Contracting.</li>
@@ -181,7 +181,7 @@ section h2::after{content:"";flex:1;height:1px;background:var(--line)}
     <h2>Selected Projects</h2>
     <div class="tl">
       <div class="item">
-        <div class="ihead"><h3>Talla — Full-Stack Delivery Platform</h3><span class="date">2026</span></div>
+        <div class="ihead"><h3>Talla — Full-Stack Delivery Platform&nbsp;</h3><span class="date">2026</span></div>
         <div class="stack">TypeScript · JavaScript · Supabase · PostgreSQL · PWA · Capacitor</div>
         <ul>
           <li>Designed and built a delivery platform for Al-Tall, Syria, with four apps: customer app, shop dashboard, driver app, and admin panel, on a secured PostgreSQL backend.</li>
@@ -210,7 +210,7 @@ section h2::after{content:"";flex:1;height:1px;background:var(--line)}
     <h2>Education</h2>
     <div class="tl">
       <div class="item">
-        <div class="ihead"><h3>B.Sc. in Computer Engineering</h3><span class="date">2026</span></div>
+        <div class="ihead"><h3>B.Sc. in Computer Engineering&nbsp;</h3><span class="date">2026</span></div>
         <div class="org">Üsküdar University · Istanbul, Turkey</div>
       </div>
     </div>

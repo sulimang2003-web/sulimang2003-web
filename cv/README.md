@@ -34,3 +34,21 @@ identical, and the extracted text is correct. As the OFL requires for a
 modified font, the patched files are renamed "CV Sans Arabic". Kerning is
 turned off on the Arabic page because it made `pdftotext` add stray spaces
 inside some bold words.
+
+## ATS parser test
+
+`checks/ats_parser_test.txt` extracts each PDF with three common parsers
+(poppler `pdftotext`, `pypdf`, `pdfminer`) and checks that key phrases come
+through. Findings:
+
+- `Sulaiman_Jamous_CV_EN.pdf` (single column): everything extracts with all
+  three parsers, in reading order. Use this one for job portals.
+- `Sulaiman_Jamous_CV_EN_Design.pdf`: every word extracts, but because of the
+  two columns some parsers interleave the sidebar with the main column.
+- `Sulaiman_Jamous_CV_AR.pdf`: correct with `pdftotext`; `pypdf` gets the right
+  words but in visual (reversed) word order; `pdfminer` reverses the letters of
+  every Arabic word — a limitation of pdfminer with any right-to-left PDF.
+
+The patched Arabic font also drops Arabic presentation-form code points from its
+cmap, so parsers get real letters instead of U+FExx glyph forms. The skill chips
+are inline blocks separated by real spaces so they don't extract glued together.

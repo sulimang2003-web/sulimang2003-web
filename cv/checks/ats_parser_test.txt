@@ -1,0 +1,11 @@
+phrase = exact text found | words = every word found, any order
+
+EN         pdftotext (poppler)  phrase 24/24  words 24/24  broken-lam-alef 0
+EN         pypdf                phrase 24/24  words 24/24  broken-lam-alef 0
+EN         pdfminer             phrase 24/24  words 24/24  broken-lam-alef 0
+EN_Design  pdftotext (poppler)  phrase 24/24  words 24/24  broken-lam-alef 0
+EN_Design  pypdf                phrase 24/24  words 24/24  broken-lam-alef 0
+EN_Design  pdfminer             phrase 24/24  words 24/24  broken-lam-alef 0
+AR         pdftotext (poppler)  phrase 14/14  words 14/14  broken-lam-alef 0
+AR         pypdf                phrase  7/14  words 13/14  broken-lam-alef 0
+AR         pdfminer             phrase  5/14  words  5/14  broken-lam-alef 0

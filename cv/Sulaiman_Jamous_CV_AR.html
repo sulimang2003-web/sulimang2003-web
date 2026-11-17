@@ -42,8 +42,8 @@ aside h3::after{content:"";flex:1;height:1px;background:rgba(196,154,82,.45)}
 .ltr{direction:ltr;unicode-bidi:isolate}
 .skgroup{margin-bottom:2.4mm}
 .skgroup h4{font-size:8.6pt;font-weight:600;color:#fff;margin-bottom:1.3mm}
-.chips{display:flex;flex-wrap:wrap;gap:1.3mm}
-.chips span{border:1px solid rgba(217,189,138,.55);border-radius:10px;padding:.2mm 2.3mm;font-size:7.7pt;color:#e8ebf1;line-height:1.6}
+.chips{line-height:0;margin-bottom:-1.3mm}
+.chips span{display:inline-block;margin:0 0 1.3mm;margin-inline-end:1mm;border:1px solid rgba(217,189,138,.55);border-radius:10px;padding:.2mm 2.3mm;font-size:7.7pt;color:#e8ebf1;line-height:1.6}
 .langs{list-style:none;display:flex;flex-direction:column;gap:1.8mm;font-size:8.6pt}
 .langs li{display:flex;justify-content:space-between;align-items:center}
 .langs small{color:#aeb6c6;font-size:7.6pt}
@@ -101,11 +101,11 @@ section h2::after{content:"";flex:1;height:1px;background:var(--line)}
 
   <div>
     <h3>المهارات</h3>
-    <div class="skgroup"><h4>البرمجة</h4><div class="chips"><span>Python</span><span>TypeScript</span><span>JavaScript</span><span>HTML</span><span>CSS</span></div></div>
-    <div class="skgroup"><h4>الذكاء الاصطناعي والبيانات</h4><div class="chips"><span>التعلم الآلي</span><span>scikit-learn</span><span>pandas</span><span>تحليل البيانات</span></div></div>
-    <div class="skgroup"><h4>الواجهات الخلفية والتكاملات</h4><div class="chips"><span>FastAPI</span><span>WhatsApp Cloud API</span><span>Apple Wallet</span><span>Google Wallet</span><span>PWA</span><span>Capacitor</span></div></div>
-    <div class="skgroup"><h4>الأتمتة</h4><div class="chips"><span>n8n</span><span>أتمتة سير العمل</span></div></div>
-    <div class="skgroup"><h4>قواعد البيانات والاستضافة</h4><div class="chips"><span>Supabase</span><span>PostgreSQL</span><span>Hetzner</span></div></div>
+    <div class="skgroup"><h4>البرمجة</h4><div class="chips"><span>Python</span> <span>TypeScript</span> <span>JavaScript</span> <span>HTML</span> <span>CSS</span></div></div>
+    <div class="skgroup"><h4>الذكاء الاصطناعي والبيانات</h4><div class="chips"><span>التعلم الآلي</span> <span>scikit-learn</span> <span>pandas</span> <span>تحليل البيانات</span></div></div>
+    <div class="skgroup"><h4>الواجهات الخلفية والتكاملات</h4><div class="chips"><span>FastAPI</span> <span>WhatsApp Cloud API</span> <span>Apple Wallet</span> <span>Google Wallet</span> <span>PWA</span> <span>Capacitor</span></div></div>
+    <div class="skgroup"><h4>الأتمتة</h4><div class="chips"><span>n8n</span> <span>أتمتة سير العمل</span></div></div>
+    <div class="skgroup"><h4>قواعد البيانات والاستضافة</h4><div class="chips"><span>Supabase</span> <span>PostgreSQL</span> <span>Hetzner</span></div></div>
     <div class="skgroup" style="margin-bottom:0"><h4>الأجهزة</h4><div class="chips"><span>تركيب وصيانة الأنظمة الأمنية</span></div></div>
   </div>
 
@@ -146,17 +146,17 @@ section h2::after{content:"";flex:1;height:1px;background:var(--line)}
     <h2>الخبرات العملية</h2>
     <div class="tl">
       <div class="item">
-        <div class="ihead"><h3>مندوب مبيعات</h3><span class="date">أكتوبر 2026 – الآن</span></div>
+        <div class="ihead"><h3>&nbsp;مندوب مبيعات</h3><span class="date">أكتوبر 2026 – الآن</span></div>
         <div class="org">جايكم — حلول تقنية للمطاعم والمقاهي · الرياض</div>
         <ul><li>عرض الحلول التقنية على أصحاب المطاعم والمقاهي، من أنظمة نقاط البيع والطلبات وغيرها من الأنظمة.</li></ul>
       </div>
       <div class="item">
-        <div class="ihead"><h3>متدرب أجهزة وبرمجيات</h3><span class="date">يونيو 2024 – فبراير 2025</span></div>
+        <div class="ihead"><h3>&nbsp;متدرب أجهزة وبرمجيات</h3><span class="date">يونيو 2024 – فبراير 2025</span></div>
         <div class="org">شركة الصندوق الآمن الأمنية · الرياض</div>
         <ul><li>تركيب وصيانة الأجهزة الأمنية وبرمجياتها ضمن مشاريع حكومية.</li></ul>
       </div>
       <div class="item">
-        <div class="ihead"><h3>أمين مستودع</h3><span class="date">2020 – 2021</span></div>
+        <div class="ihead"><h3>&nbsp;أمين مستودع</h3><span class="date">2020 – 2021</span></div>
         <div class="org">نظارات الجميل · الرياض</div>
         <ul><li>إدارة المخزون وسجلاته.</li></ul>
       </div>
@@ -167,7 +167,7 @@ section h2::after{content:"";flex:1;height:1px;background:var(--line)}
     <h2>عمل حر</h2>
     <div class="tl">
       <div class="item">
-        <div class="ihead"><h3>لمحة تك (Lamha Tech)</h3><span class="date">حتى الآن</span></div>
+        <div class="ihead"><h3>&nbsp;لمحة تك (Lamha Tech)</h3><span class="date">حتى الآن</span></div>
         <div class="org">تطوير مواقع وأنظمة أتمتة وحجز للشركات الصغيرة</div>
         <ul>
           <li>العملاء: شركة الصندوق الآمن الأمنية · نظارات الجميل · مؤسسة ثلاثة فنون للمقاولات.</li>
@@ -181,7 +181,7 @@ section h2::after{content:"";flex:1;height:1px;background:var(--line)}
     <h2>أبرز المشاريع</h2>
     <div class="tl">
       <div class="item">
-        <div class="ihead"><h3>تلة (Talla) — منصة توصيل متكاملة</h3><span class="date">2026</span></div>
+        <div class="ihead"><h3>&nbsp;تلة (Talla) — منصة توصيل متكاملة</h3><span class="date">2026</span></div>
         <div class="stack"><span class="ltr">TypeScript · JavaScript · Supabase · PostgreSQL · PWA · Capacitor</span></div>
         <ul>
           <li>تصميم وبناء منصة توصيل لمدينة التل في سوريا بأربع واجهات: تطبيق الزبون، ولوحة المتجر، وتطبيق السائق، ولوحة الإدارة، على خلفية PostgreSQL مؤمنة.</li>
@@ -210,7 +210,7 @@ section h2::after{content:"";flex:1;height:1px;background:var(--line)}
     <h2>التعليم</h2>
     <div class="tl">
       <div class="item">
-        <div class="ihead"><h3>بكالوريوس هندسة الحاسوب</h3><span class="date">2026</span></div>
+        <div class="ihead"><h3>&nbsp;بكالوريوس هندسة الحاسوب</h3><span class="date">2026</span></div>
         <div class="org">جامعة أوسكودار · إسطنبول، تركيا</div>
       </div>
     </div>
