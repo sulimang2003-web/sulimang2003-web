@@ -7,6 +7,7 @@
 | `Sulaiman_Jamous_CV_EN_Design.html` | English CV in the same two-column design as the Arabic one |
 | `Sulaiman_Jamous_CV_AR.pdf`, `Sulaiman_Jamous_CV_EN.pdf` | Generated PDFs |
 | `original_Sulaiman_Jamous_CV_AR.pdf` | The previous version, for reference |
+| `images/` | 300 dpi PNG of each CV (A4, 2479×3508 px) |
 | `checks/` | `pdftotext` output of both PDFs and the Arabic extraction check |
 | `fonts/` | Embedded fonts (IBM Plex Sans Arabic, SIL OFL — see `fonts/OFL.txt`) |
 | `tools/` | Build script, font patcher, extraction check |
