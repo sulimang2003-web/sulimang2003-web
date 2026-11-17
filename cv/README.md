@@ -4,6 +4,7 @@
 |---|---|
 | `Sulaiman_Jamous_CV_AR.html` | Source of the Arabic CV (two columns, navy sidebar, gold accents) |
 | `Sulaiman_Jamous_CV_EN.html` | Source of the English CV (single column, ATS-friendly) |
+| `Sulaiman_Jamous_CV_EN_Design.html` | English CV in the same two-column design as the Arabic one |
 | `Sulaiman_Jamous_CV_AR.pdf`, `Sulaiman_Jamous_CV_EN.pdf` | Generated PDFs |
 | `original_Sulaiman_Jamous_CV_AR.pdf` | The previous version, for reference |
 | `checks/` | `pdftotext` output of both PDFs and the Arabic extraction check |
