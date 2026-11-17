@@ -23,7 +23,7 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{width:210mm;height:297mm}
 body{font-family:Plex,sans-serif;color:var(--ink);background:var(--paper);
-  -webkit-print-color-adjust:exact;print-color-adjust:exact;font-size:9.3pt;line-height:1.5;font-kerning:none}
+  -webkit-print-color-adjust:exact;print-color-adjust:exact;font-size:9.1pt;line-height:1.45;font-kerning:none}
 a{color:inherit;text-decoration:none}
 .page{width:210mm;height:297mm;display:flex;overflow:hidden}
 
@@ -66,7 +66,7 @@ header .role{font-size:11pt;font-weight:600;color:var(--gold);margin-top:1mm}
 section h2{font-size:11.6pt;font-weight:700;color:var(--navy);display:flex;align-items:center;gap:2.6mm;margin-bottom:2.4mm}
 section h2::before{content:"";width:2.4mm;height:2.4mm;background:var(--gold);transform:rotate(45deg);flex:none}
 section h2::after{content:"";flex:1;height:1px;background:var(--line)}
-.summary{text-align:left;color:#2c3445;font-size:9.3pt}
+.summary{text-align:left;color:#2c3445;font-size:9.1pt}
 .tl{position:relative;padding-inline-start:5.5mm}
 .tl::before{content:"";position:absolute;inset-inline-start:1.05mm;top:1.8mm;bottom:1.5mm;width:1px;background:var(--line)}
 .item{position:relative;margin-bottom:3mm}
@@ -101,9 +101,9 @@ section h2::after{content:"";flex:1;height:1px;background:var(--line)}
 
   <div>
     <h3>Skills</h3>
-    <div class="skgroup"><h4>Programming</h4><div class="chips"><span>Python</span><span>JavaScript</span><span>HTML</span><span>CSS</span></div></div>
+    <div class="skgroup"><h4>Programming</h4><div class="chips"><span>Python</span><span>TypeScript</span><span>JavaScript</span><span>HTML</span><span>CSS</span></div></div>
     <div class="skgroup"><h4>AI &amp; Data</h4><div class="chips"><span>Machine Learning</span><span>scikit-learn</span><span>pandas</span><span>Data Analysis</span></div></div>
-    <div class="skgroup"><h4>Backend &amp; Integrations</h4><div class="chips"><span>FastAPI</span><span>WhatsApp Cloud API</span><span>Apple Wallet</span><span>Google Wallet</span></div></div>
+    <div class="skgroup"><h4>Backend &amp; Integrations</h4><div class="chips"><span>FastAPI</span><span>WhatsApp Cloud API</span><span>Apple Wallet</span><span>Google Wallet</span><span>PWA</span><span>Capacitor</span></div></div>
     <div class="skgroup"><h4>Automation</h4><div class="chips"><span>n8n</span><span>Workflow Automation</span></div></div>
     <div class="skgroup"><h4>Databases &amp; Hosting</h4><div class="chips"><span>Supabase</span><span>PostgreSQL</span><span>Hetzner</span></div></div>
     <div class="skgroup" style="margin-bottom:0"><h4>Hardware</h4><div class="chips"><span>Security Systems Installation &amp; Maintenance</span></div></div>
@@ -180,6 +180,14 @@ section h2::after{content:"";flex:1;height:1px;background:var(--line)}
   <section>
     <h2>Selected Projects</h2>
     <div class="tl">
+      <div class="item">
+        <div class="ihead"><h3>Talla — Full-Stack Delivery Platform</h3><span class="date">2026</span></div>
+        <div class="stack">TypeScript · JavaScript · Supabase · PostgreSQL · PWA · Capacitor</div>
+        <ul>
+          <li>Designed and built a delivery platform for Al-Tall, Syria, with four apps: customer app, shop dashboard, driver app, and admin panel, on a secured PostgreSQL backend.</li>
+          <li>133 commits, 47 database migrations, and 7 edge functions.</li>
+        </ul>
+      </div>
       <div class="item">
         <h3 class="ihead"><span>AI Job Market Analysis</span></h3>
         <div class="stack">Python · pandas · scikit-learn · FastAPI</div>

@@ -7,35 +7,37 @@ AI Developer | Computer Engineering Graduate
 Profile
 
 Contact
-
-Computer Engineering graduate from Üsküdar University (2026) specializing in
-
 +966 54 108 3813
 sulimang2003@gmail.com
 linkedin.com/in/sulaiman-jamous-2699321a3
 
-artificial intelligence and generative AI. Experienced in Python, machine learning,
-workflow automation with n8n, and SaaS platform development. Seeking an AI
-Developer role in Saudi Arabia.
+Experience
 
 Riyadh, Saudi Arabia
 
-Experience
-
-Skills
-
 Sales Representative
 
-Programming
+Skills
 Python
 
-JavaScript
+TypeScript
 
 HTML
 
 CSS
 
+JavaScript
+
+Presented technology solutions, including point-of-sale, ordering, and other
+systems, to restaurant and café owners.
+
+Hardware & Software Trainee
+
+Al-Sanduq Al-Amen Security Company · Riyadh
+
+AI & Data
 Machine Learning
+pandas
 
 scikit-learn
 
@@ -47,21 +49,31 @@ FastAPI
 WhatsApp Cloud API
 
 Apple Wallet
+PWA
 
 Google Wallet
 
+Capacitor
+
+Jun 2024 – Feb 2025
+
+Installed and maintained security devices and their software for government
+projects.
+
+Warehouse Keeper
+
+Al-Jameel Optics · Riyadh
+
+2020 – 2021
+
+Managed inventory and stock records.
+
+Freelance
+Lamha Tech
+
+Websites, automation, and booking systems for small businesses
+
 Automation
-n8n
-
-Presented technology solutions, including point-of-sale, ordering, and
-other systems, to restaurant and café owners.
-
-Hardware & Software Trainee
-
-AI & Data
-
-pandas
-
 Workflow Automation
 
 Databases & Hosting
@@ -70,6 +82,15 @@ Supabase
 Oct 2026 – Present
 
 Jaykum — Tech Solutions for Restaurants & Cafés · Riyadh
+
+Programming
+
+n8n
+
+Computer Engineering graduate from Üsküdar University (2026) specializing in
+artificial intelligence and generative AI. Experienced in Python, machine learning,
+workflow automation with n8n, and SaaS platform development. Seeking an AI
+Developer role in Saudi Arabia.
 
 PostgreSQL
 
@@ -98,41 +119,34 @@ Python for Data Science, AI &
 Development
 IBM · Coursera · 2026
 
-Jun 2024 – Feb 2025
-
-Al-Sanduq Al-Amen Security Company · Riyadh
-
-Installed and maintained security devices and their software for
-government projects.
-
-Warehouse Keeper
-
-2020 – 2021
-
-Al-Jameel Optics · Riyadh
-
-Managed inventory and stock records.
-
-Freelance
-Lamha Tech
-
 Present
 
-Websites, automation, and booking systems for small businesses
-
-Clients: Al-Sanduq Al-Amen Security Company · Al-Jameel Optics ·
-Thalatha Funoon Contracting.
+Clients: Al-Sanduq Al-Amen Security Company · Al-Jameel Optics · Thalatha
+Funoon Contracting.
 Built a responsive Arabic website for Thalatha Funoon Contracting
 (HTML · CSS · JavaScript).
 
 Selected Projects
+Talla — Full-Stack Delivery Platform
+
+TypeScript · JavaScript · Supabase · PostgreSQL · PWA · Capacitor
+
+2026
+
+Designed and built a delivery platform for Al-Tall, Syria, with four apps:
+customer app, shop dashboard, driver app, and admin panel, on a secured
+PostgreSQL backend.
+133 commits, 47 database migrations, and 7 edge functions.
+
 AI Job Market Analysis
+
 Python · pandas · scikit-learn · FastAPI
 
 Analyzed AI job postings and matched resumes to jobs using machine
 learning.
 
 WhatsApp Subscription Renewal Reminders
+
 n8n · WhatsApp Cloud API · Supabase · PostgreSQL · Hetzner
 
 Automated WhatsApp reminders sent before subscription expiry, with a
