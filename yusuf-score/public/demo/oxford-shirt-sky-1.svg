@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F4EFE6"/><stop offset="1" stop-color="#E9E1D3"/></linearGradient>
+<radialGradient id="l" cx=".5" cy=".38" r=".6"><stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs>
+<rect width="800" height="1000" fill="url(#g)"/><rect width="800" height="1000" fill="url(#l)"/>
+<ellipse cx="400" cy="800" rx="230" ry="18" fill="#000" opacity=".08"/>
+<g transform="translate(0 40)" fill="#C9D6E3" stroke="#8B9BAB" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><path d="M300 210 L360 180 Q400 205 440 180 L500 210 L590 280 L555 345 L505 315 L505 660 L295 660 L295 315 L245 345 L210 280 Z" /><path d="M360 180 L400 250 L440 180" fill="none"/><line x1="400" y1="250" x2="400" y2="660"/><circle cx="400" cy="300" r="4"/><circle cx="400" cy="370" r="4"/><circle cx="400" cy="440" r="4"/><circle cx="400" cy="510" r="4"/></g>
+<text x="400" y="905" text-anchor="middle" font-family="Georgia, serif" font-size="22" letter-spacing="8" fill="#8A7A5E">YUSUF SCORE</text>
+<text x="400" y="940" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" letter-spacing="4" fill="#a39a8a">OXFORD SHIRT · DEMO</text>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ECE6DB"/><stop offset="1" stop-color="#DCD2C1"/></linearGradient>
+<radialGradient id="l" cx=".5" cy=".38" r=".6"><stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs>
+<rect width="800" height="1000" fill="url(#g)"/><rect width="800" height="1000" fill="url(#l)"/>
+<ellipse cx="400" cy="800" rx="230" ry="18" fill="#000" opacity=".08"/>
+<g transform="translate(0 40)" fill="#5E6248" stroke="#3B3E2C" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><path d="M300 200 L365 180 Q400 200 435 180 L500 200 L575 260 L545 320 L505 300 L505 620 L295 620 L295 300 L255 320 L225 260 Z"/><path d="M365 180 L385 215 L400 290 L415 215 L435 180" fill="none"/><circle cx="400" cy="240" r="3.5"/><circle cx="400" cy="270" r="3.5"/></g>
+<text x="400" y="905" text-anchor="middle" font-family="Georgia, serif" font-size="22" letter-spacing="8" fill="#8A7A5E">YUSUF SCORE</text>
+<text x="400" y="940" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" letter-spacing="4" fill="#a39a8a">KNIT POLO · DEMO</text>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ECE6DB"/><stop offset="1" stop-color="#DCD2C1"/></linearGradient>
+<radialGradient id="l" cx=".5" cy=".38" r=".6"><stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs>
+<rect width="800" height="1000" fill="url(#g)"/><rect width="800" height="1000" fill="url(#l)"/>
+<ellipse cx="400" cy="800" rx="230" ry="18" fill="#000" opacity=".08"/>
+<g transform="translate(0 40)" fill="#C8BBA2" stroke="#998B72" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><path d="M300 170 L500 170 L515 680 L425 680 L400 330 L375 680 L285 680 Z"/><line x1="300" y1="210" x2="500" y2="210"/><path d="M330 230 Q345 270 335 300" fill="none"/><path d="M470 230 Q455 270 465 300" fill="none"/></g>
+<text x="400" y="905" text-anchor="middle" font-family="Georgia, serif" font-size="22" letter-spacing="8" fill="#8A7A5E">YUSUF SCORE</text>
+<text x="400" y="940" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" letter-spacing="4" fill="#a39a8a">CHINO · DEMO</text>
+</svg>
