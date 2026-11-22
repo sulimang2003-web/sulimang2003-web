@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="ar">
+<head>
+<meta charset="utf-8">
+<title>YUSUF SCORE — Promo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=IBM+Plex+Sans+Arabic:wght@300;400&family=Jost:wght@300;400&display=block" rel="stylesheet">
+<style>
+  :root { --ink:#0e0e0d; --ivory:#f6f1e8; --gold:#b8995a; --gold2:#d2b87f; --stone:#a39a8a; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { width:1080px; height:1920px; overflow:hidden; background:var(--ink); }
+  #stage { position:relative; width:1080px; height:1920px; overflow:hidden; background:radial-gradient(120% 80% at 70% 25%, #1d1b18 0%, #0e0e0d 55%, #070707 100%); color:var(--ivory); font-family:"Jost","IBM Plex Sans Arabic",sans-serif; }
+  .abs { position:absolute; }
+  .center { left:0; right:0; text-align:center; }
+  .glow { inset:0; background:radial-gradient(50% 30% at 50% 45%, rgba(200,169,106,.22), rgba(200,169,106,0) 70%); }
+  .grain { inset:0; opacity:.07; mix-blend-mode:overlay; background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>"); }
+  .vignette { inset:0; background:radial-gradient(90% 70% at 50% 50%, transparent 55%, rgba(0,0,0,.55) 100%); pointer-events:none; }
+  .frame { inset:44px; border:1.5px solid rgba(184,153,90,.28); }
+  .wordmark { font-family:"Cormorant Garamond",serif; font-weight:400; font-size:90px; color:var(--ivory); white-space:nowrap; direction:ltr; }
+  .wordmark span { display:inline-block; }
+  .sub { font-family:"Jost",sans-serif; font-weight:400; font-size:24px; letter-spacing:.62em; color:var(--gold); direction:ltr; }
+  .gline { height:1.5px; background:linear-gradient(90deg, transparent, var(--gold), transparent); }
+  .eyebrow { font-family:"IBM Plex Sans Arabic",sans-serif; font-size:34px; color:var(--gold2); }
+  .ar-head { font-family:"Amiri",serif; font-weight:400; font-size:132px; line-height:1.45; }
+  .tr-head { font-family:"Cormorant Garamond",serif; font-style:italic; font-weight:300; font-size:64px; color:#d9d1c3; direction:ltr; }
+  .mask { overflow:hidden; display:block; }
+  .mask > span { display:inline-block; }
+  .mono { font-family:"Cormorant Garamond",serif; font-size:1100px; line-height:1; color:transparent; -webkit-text-stroke:1.5px rgba(210,184,127,.16); direction:ltr; }
+  .phone { width:760px; height:1500px; left:160px; border-radius:92px; background:#050505; padding:24px; box-shadow:0 60px 120px rgba(0,0,0,.6), 0 0 0 2px #2a2826, inset 0 0 0 2px #1a1917; }
+  .screen { position:relative; width:100%; height:100%; border-radius:70px; overflow:hidden; background:#fbf8f2; }
+  .screen img { position:absolute; left:0; top:0; width:712px; }
+  .notch { position:absolute; top:16px; left:50%; width:190px; height:52px; margin-left:-95px; border-radius:30px; background:#050505; z-index:3; }
+  .caption-ar { font-family:"IBM Plex Sans Arabic",sans-serif; font-weight:300; font-size:46px; }
+  .caption-tr { font-family:"Cormorant Garamond",serif; font-style:italic; font-size:40px; color:var(--stone); direction:ltr; }
+  .perk { left:120px; right:120px; display:flex; align-items:center; gap:44px; direction:rtl; }
+  .perk .ic { flex:none; width:118px; height:118px; border:1.5px solid rgba(184,153,90,.55); display:grid; place-items:center; color:var(--gold); }
+  .perk .t1 { font-family:"IBM Plex Sans Arabic",sans-serif; font-size:50px; font-weight:400; }
+  .perk .t2 { font-family:"Cormorant Garamond",serif; font-style:italic; font-size:36px; color:var(--stone); direction:ltr; text-align:right; margin-top:4px; }
+  .cta { display:inline-flex; align-items:center; gap:22px; padding:30px 70px; background:var(--ivory); color:var(--ink); font-family:"IBM Plex Sans Arabic",sans-serif; font-size:44px; }
+  .handle { font-family:"Jost",sans-serif; font-size:44px; letter-spacing:.12em; direction:ltr; display:inline-flex; align-items:center; gap:18px; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div class="abs glow" id="glow"></div>
+  <div class="abs center mono" id="mono" style="top:260px">YS</div>
+
+  <!-- Scene 1: logo reveal -->
+  <div id="s1" class="abs" style="inset:0">
+    <div class="abs gline" id="s1line" style="top:1010px; left:140px; right:140px"></div>
+    <div class="abs center" style="top:850px"><div class="wordmark" id="wm"></div></div>
+    <div class="abs center sub" id="s1sub" style="top:1060px; padding-left:.62em">ISTANBUL · FATIH</div>
+  </div>
+
+  <!-- Scene 2: headline -->
+  <div id="s2" class="abs" style="inset:0">
+    <div class="abs center eyebrow" id="s2eye" style="top:560px">تشكيلة خريف / شتاء 2026</div>
+    <div class="abs center ar-head" dir="rtl" style="top:660px">
+      <span class="mask"><span id="h1">أناقة هادئة</span></span>
+      <span class="mask"><span id="h2">بتفاصيل لا تُنسى</span></span>
+    </div>
+    <div class="abs gline" id="s2line" style="top:1150px; left:340px; right:340px"></div>
+    <div class="abs center tr-head" id="s2tr" style="top:1200px">Sessiz şıklık, unutulmaz detaylar</div>
+  </div>
+
+  <!-- Scene 3: phone -->
+  <div id="s3" class="abs" style="inset:0">
+    <div class="abs center" id="s3cap" style="top:120px">
+      <div class="caption-ar" dir="rtl">تجربة تسوّق فاخرة من جوالك</div>
+      <div class="caption-tr" style="margin-top:10px">Lüks alışveriş, artık cebinizde</div>
+    </div>
+    <div class="abs phone" id="phone" style="top:330px">
+      <div class="screen">
+        <div class="notch"></div>
+        <img id="imgHome" src="assets/home.png" alt="">
+        <img id="imgProd" src="assets/product.png" alt="" style="opacity:0">
+      </div>
+    </div>
+  </div>
+
+  <!-- Scene 4: perks -->
+  <div id="s4" class="abs" style="inset:0">
+    <div class="abs center eyebrow" id="s4eye" style="top:420px">لماذا Yusuf Score</div>
+    <div class="abs perk" id="p1" style="top:600px">
+      <div class="ic"><svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1"><path d="M20 11.6a8 8 0 0 1-11.8 7L4 20l1.4-4.1A8 8 0 1 1 20 11.6Z"/></svg></div>
+      <div><div class="t1">اطلب مباشرة عبر واتساب</div><div class="t2">WhatsApp ile kolay sipariş</div></div>
+    </div>
+    <div class="abs perk" id="p2" style="top:820px">
+      <div class="ic"><svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1"><path d="M3 6h11v10H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="18" r="1.8"/><circle cx="17" cy="18" r="1.8"/></svg></div>
+      <div><div class="t1">توصيل سريع داخل إسطنبول</div><div class="t2">İstanbul içi hızlı teslimat</div></div>
+    </div>
+    <div class="abs perk" id="p3" style="top:1040px">
+      <div class="ic"><svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1"><path d="M4 9h13l-3-3M20 15H7l3 3"/></svg></div>
+      <div><div class="t1">استبدال المقاس بسهولة</div><div class="t2">Kolay beden değişimi</div></div>
+    </div>
+    <div class="abs perk" id="p4" style="top:1260px">
+      <div class="ic"><svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1"><path d="M4 10v10h16V10M3 10l2-6h14l2 6H3Z"/><path d="M10 20v-5h4v5"/></svg></div>
+      <div><div class="t1">متجرنا في الفاتح، إسطنبول</div><div class="t2">Fatih'teki mağazamız</div></div>
+    </div>
+  </div>
+
+  <!-- Scene 5: end card -->
+  <div id="s5" class="abs" style="inset:0">
+    <div class="abs center" id="s5logo" style="top:640px"><div class="wordmark" style="font-size:104px; letter-spacing:.32em; padding-left:.32em">YUSUF SCORE</div></div>
+    <div class="abs center sub" id="s5sub" style="top:790px; padding-left:.62em">ISTANBUL · FATIH</div>
+    <div class="abs gline" id="s5line" style="top:880px; left:300px; right:300px"></div>
+    <div class="abs center" id="s5cta" style="top:1000px"><span class="cta" dir="rtl">تسوّق التشكيلة الآن <span style="font-family:Jost">←</span></span></div>
+    <div class="abs center" id="s5ig" style="top:1210px"><span class="handle"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#b8995a" stroke-width="1.3"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="4"/></svg>@yusufscore</span></div>
+    <div class="abs center caption-tr" id="s5tr" style="top:1310px">Online · WhatsApp · Mağaza</div>
+  </div>
+
+  <div class="abs frame" id="frame"></div>
+  <div class="abs vignette"></div>
+  <div class="abs grain"></div>
+  <div class="abs" id="fade" style="inset:0; background:#000; opacity:1"></div>
+</div>
+
+<script>
+  const DURATION = 23;
+  const $ = (id) => document.getElementById(id);
+  const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+  const p = (t, s, e) => clamp((t - s) / (e - s));
+  const outCubic = (x) => 1 - Math.pow(1 - x, 3);
+  const inOut = (x) => (x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2);
+  const outExpo = (x) => (x === 1 ? 1 : 1 - Math.pow(2, -10 * x));
+  // visibility window with fade in / fade out
+  const win = (t, a, b, f = .6) => Math.min(outCubic(p(t, a, a + f)), 1 - inOut(p(t, b - f, b)));
+
+  const WORD = "YUSUF SCORE";
+  $("wm").innerHTML = [...WORD].map((c) => `<span>${c === " " ? "&nbsp;" : c}</span>`).join("");
+  const letters = [...$("wm").children];
+
+  function render(t) {
+    // global
+    $("fade").style.opacity = Math.max(1 - p(t, 0, .6), p(t, DURATION - .5, DURATION));
+    $("glow").style.opacity = .5 + .5 * Math.sin(t * .6);
+    $("frame").style.opacity = .4 + .6 * outCubic(p(t, .2, 1.6));
+    const monoO = win(t, 7.6, 18.8, 1.2) * .9;
+    $("mono").style.opacity = monoO;
+    $("mono").style.transform = `translateY(${-60 * p(t, 7.6, 18.8)}px) scale(${1.05 - .05 * p(t, 7.6, 18.8)})`;
+
+    // S1 — logo reveal (0 → 4.2)
+    const s1 = 1 - inOut(p(t, 3.6, 4.3));
+    $("s1").style.opacity = s1;
+    $("s1").style.transform = `scale(${1 + .06 * p(t, 3.6, 4.3)})`;
+    $("s1line").style.transform = `scaleX(${outExpo(p(t, .3, 1.6))})`;
+    const spacing = .62 - .32 * outCubic(p(t, .6, 3.2));
+    $("wm").style.letterSpacing = spacing + "em";
+    $("wm").style.paddingLeft = spacing + "em";
+    letters.forEach((el, i) => {
+      const k = outCubic(p(t, .7 + i * .09, 1.5 + i * .09));
+      el.style.opacity = k;
+      el.style.filter = `blur(${(1 - k) * 14}px)`;
+      el.style.transform = `translateY(${(1 - k) * 26}px)`;
+    });
+    $("s1sub").style.opacity = outCubic(p(t, 2.1, 2.9));
+    $("s1sub").style.letterSpacing = (.9 - .28 * outCubic(p(t, 2.1, 3.4))) + "em";
+
+    // S2 — headline (4 → 8.2)
+    $("s2").style.opacity = win(t, 4, 8.2, .5);
+    $("s2eye").style.opacity = outCubic(p(t, 4.2, 4.9));
+    $("h1").style.transform = `translateY(${(1 - outCubic(p(t, 4.4, 5.3))) * 110}%)`;
+    $("h2").style.transform = `translateY(${(1 - outCubic(p(t, 4.75, 5.65))) * 110}%)`;
+    $("s2line").style.transform = `scaleX(${outExpo(p(t, 5.5, 6.6))})`;
+    $("s2tr").style.opacity = outCubic(p(t, 5.9, 6.8));
+    $("s2tr").style.transform = `translateY(${(1 - outCubic(p(t, 5.9, 6.8))) * 24}px)`;
+    $("s2").style.transform = `scale(${1 + .03 * p(t, 4, 8.2)})`;
+
+    // S3 — phone (8 → 15)
+    $("s3").style.opacity = win(t, 8, 15, .6);
+    const ph = outCubic(p(t, 8, 9.3));
+    $("phone").style.transform = `translateY(${(1 - ph) * 520}px) scale(${.9 + .1 * ph})`;
+    $("s3cap").style.opacity = outCubic(p(t, 8.5, 9.4));
+    // home scroll, then product crossfade
+    $("imgHome").style.transform = `translateY(${-3900 * inOut(p(t, 9.4, 12.2))}px)`;
+    const cross = inOut(p(t, 12.2, 12.8));
+    $("imgHome").style.opacity = 1 - cross;
+    $("imgProd").style.opacity = cross;
+    $("imgProd").style.transform = `translateY(${-760 * inOut(p(t, 12.9, 14.4))}px)`;
+
+    // S4 — perks (14.8 → 19)
+    $("s4").style.opacity = win(t, 14.8, 19, .5);
+    $("s4eye").style.opacity = outCubic(p(t, 15, 15.6));
+    ["p1", "p2", "p3", "p4"].forEach((id, i) => {
+      const k = outCubic(p(t, 15.3 + i * .38, 16.1 + i * .38));
+      $(id).style.opacity = k;
+      $(id).style.transform = `translateX(${(1 - k) * -70}px)`;
+    });
+
+    // S5 — end card (18.8 → end)
+    $("s5").style.opacity = outCubic(p(t, 18.8, 19.5));
+    const lg = outCubic(p(t, 18.9, 20.2));
+    $("s5logo").style.opacity = lg;
+    $("s5logo").style.filter = `blur(${(1 - lg) * 12}px)`;
+    $("s5sub").style.opacity = outCubic(p(t, 19.6, 20.4));
+    $("s5line").style.transform = `scaleX(${outExpo(p(t, 19.8, 21))})`;
+    $("s5cta").style.opacity = outCubic(p(t, 20.3, 21));
+    $("s5cta").style.transform = `translateY(${(1 - outCubic(p(t, 20.3, 21))) * 30}px)`;
+    $("s5ig").style.opacity = outCubic(p(t, 20.7, 21.4));
+    $("s5tr").style.opacity = outCubic(p(t, 21, 21.7));
+  }
+  window.render = render;
+  window.DURATION = DURATION;
+  render(0);
+  // Live preview when opened directly in a browser
+  if (!navigator.webdriver) {
+    const t0 = performance.now();
+    const loop = () => { render(((performance.now() - t0) / 1000) % DURATION); requestAnimationFrame(loop); };
+    document.fonts.ready.then(loop);
+  }
+</script>
+</body>
+</html>
