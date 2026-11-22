@@ -44,7 +44,7 @@ export function CartView() {
           </li>
         ))}
       </ul>
-      <aside className="h-fit space-y-4 bg-ivory p-6 lg:sticky lg:top-28">
+      <aside className="h-fit space-y-4 bg-white/[0.04] backdrop-blur-xl border border-bone p-6 lg:sticky lg:top-28">
         <h2 className="font-display text-2xl">{dict.checkout.summary}</h2>
         <div className="flex justify-between text-sm"><span>{dict.cart.subtotal}</span><span>{formatTRY(subtotalMinor, locale)}</span></div>
         <div className="flex justify-between text-sm text-smoke"><span>{dict.cart.shipping}</span><span>{dict.cart.shippingCalc}</span></div>

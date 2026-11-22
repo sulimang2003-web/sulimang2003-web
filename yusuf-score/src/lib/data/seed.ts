@@ -94,4 +94,5 @@ export const seedSettings: StoreSettings = {
     estimatedDays: { istanbul: "1–2", turkey: "2–4" },
   },
   paymentProvider: "none",
+  socials: { mapsUrl: "https://www.google.com/maps/search/?api=1&query=Yusuf+Score+Fatih+Istanbul" },
 };

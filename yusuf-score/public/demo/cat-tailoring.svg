@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" preserveAspectRatio="xMidYMid slice">
-<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1d1c1a"/><stop offset=".6" stop-color="#121211"/><stop offset="1" stop-color="#0a0a0a"/></linearGradient>
-<radialGradient id="s" cx=".68" cy=".4" r=".55"><stop offset="0" stop-color="#C8A96A" stop-opacity=".22"/><stop offset="1" stop-color="#C8A96A" stop-opacity="0"/></radialGradient></defs>
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2a2c30"/><stop offset=".6" stop-color="#1d1f22"/><stop offset="1" stop-color="#141518"/></linearGradient>
+<radialGradient id="s" cx=".68" cy=".4" r=".55"><stop offset="0" stop-color="#C4C6C9" stop-opacity=".22"/><stop offset="1" stop-color="#C4C6C9" stop-opacity="0"/></radialGradient></defs>
 <rect width="800" height="1000" fill="url(#g)"/><rect width="800" height="1000" fill="url(#s)"/>
-<g opacity=".9" transform="translate(96 20) scale(1)" fill="#2b3448" stroke="#C8A96A" stroke-opacity=".35" stroke-width="2"><path d="M295 200 L360 175 L400 330 L440 175 L505 200 L585 290 L560 640 L500 640 L500 680 L300 680 L300 640 L240 640 L215 290 Z"/><path d="M360 175 L330 300 L400 420 L470 300 L440 175" fill="none"/><line x1="400" y1="420" x2="400" y2="680"/><circle cx="410" cy="470" r="5"/><circle cx="410" cy="540" r="5"/><line x1="320" y1="520" x2="370" y2="520"/></g>
-<line x1="64" y1="920" x2="736" y2="920" stroke="#C8A96A" stroke-opacity=".25"/>
+<g opacity=".9" transform="translate(96 20) scale(1)" fill="#2b3448" stroke="#C4C6C9" stroke-opacity=".35" stroke-width="2"><path d="M295 200 L360 175 L400 330 L440 175 L505 200 L585 290 L560 640 L500 640 L500 680 L300 680 L300 640 L240 640 L215 290 Z"/><path d="M360 175 L330 300 L400 420 L470 300 L440 175" fill="none"/><line x1="400" y1="420" x2="400" y2="680"/><circle cx="410" cy="470" r="5"/><circle cx="410" cy="540" r="5"/><line x1="320" y1="520" x2="370" y2="520"/></g>
+<line x1="64" y1="920" x2="736" y2="920" stroke="#C4C6C9" stroke-opacity=".25"/>
 </svg>

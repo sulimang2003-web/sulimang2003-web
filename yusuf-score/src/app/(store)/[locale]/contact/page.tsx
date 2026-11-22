@@ -11,12 +11,12 @@ export default async function Contact({ params }: PageProps<"/[locale]/contact">
     <div className="container-luxe py-14 md:py-20">
       <h1 className="heading-display text-4xl md:text-6xl">{d.pages.contactTitle}</h1>
       <div className="mt-12 grid gap-px bg-bone md:grid-cols-3">
-        <a href={waLink(s.whatsappNumber, "")} target="_blank" rel="noopener" className="group bg-paper p-8 transition-colors hover:bg-ivory">
+        <a href={waLink(s.whatsappNumber, "")} target="_blank" rel="noopener" className="group bg-paper p-8 transition-colors hover:bg-white/[0.06]">
           <IconWhatsApp className="text-gold" width={28} height={28} />
           <p className="mt-6 font-display text-2xl">WhatsApp</p>
           <p className="mt-2 text-smoke" dir="ltr">+{s.whatsappNumber}</p>
         </a>
-        <a href={`https://instagram.com/${s.instagramHandle}`} target="_blank" rel="noopener" className="bg-paper p-8 transition-colors hover:bg-ivory">
+        <a href={`https://instagram.com/${s.instagramHandle}`} target="_blank" rel="noopener" className="bg-paper p-8 transition-colors hover:bg-white/[0.06]">
           <IconInstagram className="text-gold" width={28} height={28} />
           <p className="mt-6 font-display text-2xl">Instagram</p>
           <p className="mt-2 text-smoke" dir="ltr">@{s.instagramHandle}</p>

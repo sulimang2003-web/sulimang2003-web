@@ -14,7 +14,7 @@ export function ProductGallery({ images, alt }: { images: string[]; alt: string 
     <div className="md:grid md:grid-cols-[72px_1fr] md:gap-4">
       <div className="hidden md:flex md:flex-col md:gap-3">
         {images.map((src, i) => (
-          <button key={src} onClick={() => go(i)} className={`relative aspect-[4/5] w-full bg-bone transition-opacity ${i === active ? "opacity-100 ring-1 ring-ink" : "opacity-55 hover:opacity-100"}`} aria-label={`${i + 1}`}>
+          <button key={src} onClick={() => go(i)} className={`relative aspect-[4/5] w-full bg-bone transition-opacity ${i === active ? "opacity-100 ring-1 ring-ivory" : "opacity-55 hover:opacity-100"}`} aria-label={`${i + 1}`}>
             <Image src={src} alt="" fill sizes="72px" className="object-cover" />
           </button>
         ))}

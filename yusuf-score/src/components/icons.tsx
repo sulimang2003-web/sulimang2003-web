@@ -23,3 +23,8 @@ export const IconWhatsApp = (p: SVGProps<SVGSVGElement>) => (
     <path d="M9 8.6c.2-.4.4-.4.7-.4h.5c.2 0 .4 0 .5.4l.7 1.6c0 .2 0 .3-.1.5l-.5.6c-.1.1-.1.3 0 .4.6 1 1.4 1.8 2.4 2.3.2.1.3.1.4 0l.6-.7c.1-.2.3-.2.5-.1l1.6.8c.2.1.3.2.3.4 0 .9-.7 1.7-1.7 1.8-.6.1-1.4 0-2.9-.6a9 9 0 0 1-3.8-3.6c-.6-1-.7-1.9-.6-2.5Z" fill="currentColor" stroke="none" />
   </svg>
 );
+export const IconTikTok = (p: SVGProps<SVGSVGElement>) => (<svg {...base(p)}><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5" /><path d="M14 3c.4 2.6 2.2 4.4 5 4.6" /></svg>);
+export const IconFacebook = (p: SVGProps<SVGSVGElement>) => (<svg {...base(p)}><path d="M14.5 8H17V4.5h-2.5A3.5 3.5 0 0 0 11 8v2.5H8.5V14H11v7h3.5v-7H17l.5-3.5h-3V8.6c0-.4.2-.6.5-.6Z" /></svg>);
+export const IconSnapchat = (p: SVGProps<SVGSVGElement>) => (<svg {...base(p)}><path d="M12 3.5c2.8 0 4.6 2.1 4.6 4.8v2.2l1.9-.6c.5 0 .7.6.3.9l-2 1.2c.6 1.8 1.9 3 3.4 3.5-.4.9-1.6 1.1-2.6 1.3-.2.6-.3 1.2-.6 1.2-.6 0-1.5-.4-2.6.1-.9.5-1.4 1.4-2.4 1.4s-1.5-.9-2.4-1.4c-1.1-.5-2-.1-2.6-.1-.3 0-.4-.6-.6-1.2-1-.2-2.2-.4-2.6-1.3 1.5-.5 2.8-1.7 3.4-3.5l-2-1.2c-.4-.3-.2-.9.3-.9l1.9.6V8.3c0-2.7 1.8-4.8 4.6-4.8Z" /></svg>);
+export const IconYouTube = (p: SVGProps<SVGSVGElement>) => (<svg {...base(p)}><rect x="2.5" y="5.5" width="19" height="13" rx="4" /><path d="m10 9.2 5 2.8-5 2.8V9.2Z" fill="currentColor" stroke="none" /></svg>);
+export const IconPin = (p: SVGProps<SVGSVGElement>) => (<svg {...base(p)}><path d="M12 21s-6.5-5.7-6.5-11a6.5 6.5 0 1 1 13 0c0 5.3-6.5 11-6.5 11Z" /><circle cx="12" cy="10" r="2.3" /></svg>);

@@ -171,11 +171,17 @@ export async function saveSettings(_: ActionState, form: FormData): Promise<Acti
     vatRate: Number(form.get("vatRate")),
   });
   if (!p.success) return { error: "تحقق من رقم واتساب (أرقام فقط مع رمز الدولة 90) والبريد" };
+  const handle = (k: string) => String(form.get(k) ?? "").trim().replace(/^@/, "").replace(/[^\w.]/g, "").slice(0, 40) || undefined;
+  const url = (k: string) => {
+    const v = String(form.get(k) ?? "").trim().slice(0, 300);
+    return /^https:\/\/[^\s"<>]+$/.test(v) ? v : undefined;
+  };
   const r = repo();
   const current = await r.getSettings();
   const next: StoreSettings = {
     ...current,
     ...p.data,
+    socials: { tiktok: handle("tiktok"), snapchat: handle("snapchat"), facebook: url("facebook"), youtube: url("youtube"), mapsUrl: url("mapsUrl") },
     pricesIncludeVat: true,
     shipping: {
       ...current.shipping,

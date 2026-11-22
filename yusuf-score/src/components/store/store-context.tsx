@@ -21,6 +21,8 @@ export interface CartLine {
 
 type PublicSettings = Pick<StoreSettings, "whatsappNumber" | "instagramHandle" | "shipping" | "addressLine" | "email">;
 
+export interface Toast { id: number; title: string; body?: string; image?: string; action?: { label: string; onClick: () => void }; tone?: "default" | "error" }
+
 interface Ctx {
   locale: Locale;
   dict: Dictionary;
@@ -34,6 +36,9 @@ interface Ctx {
   clear(): void;
   drawerOpen: boolean;
   setDrawerOpen(v: boolean): void;
+  toasts: Toast[];
+  notify(t: Omit<Toast, "id">): void;
+  dismiss(id: number): void;
 }
 
 const StoreCtx = createContext<Ctx | null>(null);
@@ -43,6 +48,13 @@ export function StoreProvider({ locale, dict, settings, children }: { locale: Lo
   const [lines, setLines] = useState<CartLine[]>([]);
   const [ready, setReady] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [toasts, setToasts] = useState<Toast[]>([]);
+  const dismiss = useCallback((id: number) => setToasts((x) => x.filter((t) => t.id !== id)), []);
+  const notify = useCallback((t: Omit<Toast, "id">) => {
+    const id = Date.now() + Math.random();
+    setToasts((x) => [...x.slice(-2), { ...t, id }]);
+    setTimeout(() => setToasts((x) => x.filter((y) => y.id !== id)), 4200);
+  }, []);
 
   useEffect(() => {
     try {
@@ -62,7 +74,6 @@ export function StoreProvider({ locale, dict, settings, children }: { locale: Lo
       if (ex) return prev.map((p) => (p.key === key ? { ...p, qty: Math.min(p.maxQty, p.qty + l.qty) } : p));
       return [...prev, { ...l, key, qty: Math.min(l.maxQty, l.qty) }];
     });
-    setDrawerOpen(true);
   }, []);
   const setQty = useCallback((key: string, qty: number) =>
     setLines((prev) => prev.map((p) => (p.key === key ? { ...p, qty: Math.max(1, Math.min(p.maxQty, qty)) } : p))), []);
@@ -73,8 +84,8 @@ export function StoreProvider({ locale, dict, settings, children }: { locale: Lo
     locale, dict, settings, lines,
     count: lines.reduce((s, l) => s + l.qty, 0),
     subtotalMinor: lines.reduce((s, l) => s + l.qty * l.priceMinor, 0),
-    add, setQty, remove, clear, drawerOpen, setDrawerOpen,
-  }), [locale, dict, settings, lines, add, setQty, remove, clear, drawerOpen]);
+    add, setQty, remove, clear, drawerOpen, setDrawerOpen, toasts, notify, dismiss,
+  }), [locale, dict, settings, lines, add, setQty, remove, clear, drawerOpen, toasts, notify, dismiss]);
 
   return <StoreCtx.Provider value={value}>{children}</StoreCtx.Provider>;
 }

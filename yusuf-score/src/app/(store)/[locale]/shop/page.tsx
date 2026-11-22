@@ -53,7 +53,7 @@ export default async function Shop({ params, searchParams }: PageProps<"/[locale
           {sizes.map((s) => (
             <label key={s} className="cursor-pointer">
               <input type="radio" name="size" value={s} defaultChecked={filter.size === s} className="peer sr-only" />
-              <span className="chip peer-checked:bg-ink peer-checked:text-ivory peer-checked:border-ink">{s}</span>
+              <span className="chip peer-checked:bg-ivory peer-checked:text-ink peer-checked:border-ivory">{s}</span>
             </label>
           ))}
         </div>
@@ -64,7 +64,7 @@ export default async function Shop({ params, searchParams }: PageProps<"/[locale
           {colors.map((c) => (
             <label key={c.code} className="cursor-pointer flex flex-col items-center gap-1.5 text-[0.7rem] text-smoke" title={t(c.name, locale)}>
               <input type="radio" name="color" value={c.code} defaultChecked={filter.color === c.code} className="peer sr-only" />
-              <span className="h-8 w-8 rounded-full ring-1 ring-stone/40 ring-offset-2 ring-offset-paper peer-checked:ring-2 peer-checked:ring-ink" style={{ background: c.hex }} />
+              <span className="h-8 w-8 rounded-full ring-1 ring-stone/40 ring-offset-2 ring-offset-paper peer-checked:ring-2 peer-checked:ring-ivory" style={{ background: c.hex }} />
               {t(c.name, locale)}
             </label>
           ))}

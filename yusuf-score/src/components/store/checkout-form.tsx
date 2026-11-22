@@ -10,7 +10,7 @@ import { IconWhatsApp } from "../icons";
 import { track } from "./analytics";
 
 export function CheckoutForm({ onlinePayment }: { onlinePayment: boolean }) {
-  const { lines, dict, locale, subtotalMinor, settings, clear } = useStore();
+  const { lines, dict, locale, subtotalMinor, settings, clear, notify } = useStore();
   const c = dict.checkout;
   const [city, setCity] = useState("İstanbul");
   const [coupon, setCoupon] = useState("");
@@ -29,7 +29,7 @@ export function CheckoutForm({ onlinePayment }: { onlinePayment: boolean }) {
       <div className="mx-auto max-w-lg py-20 text-center animate-fade-up">
         <p className="eyebrow !text-gold">✦</p>
         <h1 className="heading-display mt-4 text-4xl">{c.successTitle}</h1>
-        <p className="mt-4 text-smoke">{c.successText}: <strong dir="ltr" className="text-ink">{done.number}</strong></p>
+        <p className="mt-4 text-smoke">{c.successText}: <strong dir="ltr" className="text-ivory">{done.number}</strong></p>
         <p className="mt-6 text-sm text-smoke">{c.successNext}</p>
         <a href={done.wa} target="_blank" rel="noopener" className="btn btn-wa mt-8"><IconWhatsApp /> {c.openWhatsapp}</a>
         <div className="mt-4"><Link href={`/${locale}/shop`} className="text-sm link-underline">{dict.cart.continue}</Link></div>
@@ -48,8 +48,8 @@ export function CheckoutForm({ onlinePayment }: { onlinePayment: boolean }) {
     setCouponMsg("");
     const res = await fetch("/api/coupons/validate", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ code: coupon, subtotalMinor }) });
     const j = await res.json();
-    if (j.ok) { setDiscount({ code: coupon.toUpperCase(), minor: j.discountMinor }); setCouponMsg(c.couponApplied); }
-    else { setDiscount(null); setCouponMsg("✕"); }
+    if (j.ok) { setDiscount({ code: coupon.toUpperCase(), minor: j.discountMinor }); setCouponMsg(c.couponApplied); notify({ title: c.couponApplied, body: `${coupon.toUpperCase()} · -${formatTRY(j.discountMinor, locale)}` }); }
+    else { setDiscount(null); setCouponMsg("✕"); notify({ title: c.coupon, body: "✕", tone: "error" }); }
   }
 
   async function submit(e: React.FormEvent<HTMLFormElement>) {
@@ -81,11 +81,14 @@ export function CheckoutForm({ onlinePayment }: { onlinePayment: boolean }) {
       );
       track("Lead", { value: o.totalMinor / 100, currency: "TRY" });
       clear();
+      notify({ title: c.successTitle, body: `${c.successText}: ${o.number}` });
       setDone({ number: o.number, wa });
       window.scrollTo({ top: 0 });
       setTimeout(() => window.location.assign(wa), 900);
     } catch (e) {
-      setErr(e instanceof Error && e.message === "out_of_stock" ? `${dict.product.outOfStock} — ${c.errorGeneric}` : c.errorGeneric);
+      const msg = e instanceof Error && e.message === "out_of_stock" ? `${dict.product.outOfStock} — ${c.errorGeneric}` : c.errorGeneric;
+      setErr(msg);
+      notify({ title: c.title, body: msg, tone: "error" });
     } finally {
       setBusy(false);
     }
@@ -120,8 +123,8 @@ export function CheckoutForm({ onlinePayment }: { onlinePayment: boolean }) {
         </fieldset>
         <fieldset className="space-y-3">
           <legend className="font-display text-2xl mb-4">{c.payment}</legend>
-          <label className="flex cursor-pointer gap-4 border border-ink p-5">
-            <input type="radio" name="method" defaultChecked className="mt-1 accent-ink" />
+          <label className="flex cursor-pointer gap-4 border border-ivory/60 p-5">
+            <input type="radio" name="method" defaultChecked className="mt-1 accent-ivory" />
             <span><span className="flex items-center gap-2 font-medium"><IconWhatsApp width={18} /> {c.payWhatsapp}</span><span className="mt-1 block text-sm text-smoke">{c.payWhatsappText}</span></span>
           </label>
           <label className={`flex gap-4 border border-bone p-5 ${onlinePayment ? "cursor-pointer" : "opacity-50"}`}>
@@ -131,7 +134,7 @@ export function CheckoutForm({ onlinePayment }: { onlinePayment: boolean }) {
         </fieldset>
       </div>
 
-      <aside className="h-fit space-y-5 bg-ivory p-6 lg:sticky lg:top-28">
+      <aside className="h-fit space-y-5 bg-white/[0.04] backdrop-blur-xl border border-bone p-6 lg:sticky lg:top-28">
         <h2 className="font-display text-2xl">{c.summary}</h2>
         <ul className="space-y-4">
           {lines.map((l) => (
@@ -159,7 +162,7 @@ export function CheckoutForm({ onlinePayment }: { onlinePayment: boolean }) {
         <div className="flex justify-between text-lg"><span>{dict.cart.total}</span><span>{formatTRY(total, locale)}</span></div>
         <p className="text-xs text-smoke">{dict.cart.vatNote}</p>
         <label className="flex gap-3 text-xs leading-relaxed text-graphite">
-          <input type="checkbox" name="consent" required className="mt-0.5 accent-ink" />
+          <input type="checkbox" name="consent" required className="mt-0.5 accent-ivory" />
           <span>
             {c.agree}{" "}
             <Link href={`/${locale}/policies/terms`} target="_blank" className="underline">↗</Link>{" "}

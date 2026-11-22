@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
-<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2A2826"/><stop offset="1" stop-color="#1C1B1A"/></linearGradient>
+<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2C2E32"/><stop offset="1" stop-color="#1D1F22"/></linearGradient>
 <radialGradient id="l" cx=".5" cy=".38" r=".6"><stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs>
 <rect width="800" height="1000" fill="url(#g)"/><rect width="800" height="1000" fill="url(#l)"/>
 <ellipse cx="400" cy="800" rx="230" ry="18" fill="#000" opacity=".08"/>
 <g transform="translate(0 40)" fill="#B48756" stroke="#7E5A33" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><path d="M300 180 L360 160 L400 300 L440 160 L500 180 L590 280 L570 720 L230 720 L210 280 Z"/><path d="M360 160 L320 280 L400 380 L480 280 L440 160" fill="none"/><line x1="400" y1="380" x2="400" y2="720"/><circle cx="370" cy="430" r="6"/><circle cx="430" cy="430" r="6"/><circle cx="370" cy="520" r="6"/><circle cx="430" cy="520" r="6"/></g>
-<text x="400" y="905" text-anchor="middle" font-family="Georgia, serif" font-size="22" letter-spacing="8" fill="#C8A96A">YUSUF SCORE</text>
-<text x="400" y="940" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" letter-spacing="4" fill="#8f8a82">CASHMERE COAT · DEMO</text>
+<text x="400" y="905" text-anchor="middle" font-family="Georgia, serif" font-size="22" letter-spacing="8" fill="#C4C6C9" font-weight="700">YUSUF SCORE</text>
+<text x="400" y="940" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" letter-spacing="4" fill="#8b8e93">CASHMERE COAT · DEMO</text>
 </svg>

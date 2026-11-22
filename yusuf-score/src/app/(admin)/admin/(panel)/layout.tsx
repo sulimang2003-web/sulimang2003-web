@@ -11,8 +11,8 @@ export default async function Panel({ children }: { children: React.ReactNode })
     <div className="md:grid md:min-h-dvh md:grid-cols-[240px_1fr]">
       <aside className="bg-ink text-ivory md:sticky md:top-0 md:h-dvh md:flex md:flex-col">
         <div className="flex items-center justify-between px-5 py-4 md:block md:py-7">
-          <Link href="/admin" className="font-display text-xl tracking-[0.25em]" dir="ltr">YUSUF SCORE</Link>
-          <p className="hidden text-[0.65rem] text-gold md:mt-1 md:block">لوحة الإدارة</p>
+          <Link href="/admin" className="flex items-center gap-3 font-logo text-lg font-bold tracking-[0.25em]" dir="ltr"><img src="/brand/ys-logo-circle.png" alt="" className="h-9 w-9 rounded-full" />YUSUF SCORE</Link>
+          <p className="hidden text-[0.65rem] text-stone md:mt-2 md:block">FOR MEN · لوحة الإدارة</p>
         </div>
         <AdminNav />
         <div className="hidden border-t border-ivory/10 p-5 text-xs text-ivory/50 md:mt-auto md:block">

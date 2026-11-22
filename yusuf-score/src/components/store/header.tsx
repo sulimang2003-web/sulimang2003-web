@@ -31,10 +31,9 @@ export function Header({ categories }: { categories: { slug: string; name: strin
 
   return (
     <>
-      <div className="bg-ink text-ivory/85 text-[0.7rem] rtl:text-xs text-center py-2 px-4 tracking-wide">{dict.announcement}</div>
+      <div className="glass !border-x-0 !border-t-0 text-ivory/80 text-[0.7rem] rtl:text-xs text-center py-2 px-4 tracking-wide">{dict.announcement}</div>
       <header
-        className={`sticky top-0 z-40 transition-colors duration-500 ${transparent ? "bg-transparent text-ivory" : "bg-paper/95 backdrop-blur text-ink border-b border-bone"}`}
-        style={transparent ? { marginBottom: "-4.5rem" } : undefined}
+        className={`sticky top-0 z-40 transition-colors duration-500 ${transparent ? "bg-transparent text-ivory" : "bg-paper/70 backdrop-blur-2xl text-ivory border-b border-bone"}`}
       >
         <div className="container-luxe grid h-[4.5rem] grid-cols-[1fr_auto_1fr] items-center">
           <div className="flex items-center gap-5">
@@ -47,7 +46,7 @@ export function Header({ categories }: { categories: { slug: string; name: strin
               ))}
             </nav>
           </div>
-          <Link href={L("")} aria-label="Yusuf Score"><Logo tone={transparent ? "light" : "dark"} /></Link>
+          <Link href={L("")} aria-label="Yusuf Score"><Logo tone="light" withMark /></Link>
           <div className="flex items-center justify-end gap-4">
             <div className="hidden md:flex items-center gap-1 text-[0.7rem] uppercase tracking-widest">
               {locales.map((l) => (
@@ -58,14 +57,14 @@ export function Header({ categories }: { categories: { slug: string; name: strin
             <button aria-label={dict.nav.cart} onClick={() => setDrawerOpen(true)} className="relative p-1">
               <IconBag />
               {count > 0 && (
-                <span className="absolute -top-1 -end-1.5 grid h-4 min-w-4 place-items-center rounded-full bg-gold px-1 text-[0.6rem] text-ink">{count}</span>
+                <span className="absolute -top-1 -end-1.5 grid h-4 min-w-4 place-items-center rounded-full bg-ivory px-1 text-[0.6rem] text-ink">{count}</span>
               )}
             </button>
           </div>
         </div>
         {search && (
           <form
-            className="border-t border-bone bg-paper text-ink animate-fade-in"
+            className="border-t border-bone bg-paper text-ivory animate-fade-in"
             onSubmit={(e) => { e.preventDefault(); const q = new FormData(e.currentTarget).get("q"); router.push(L(`/shop?q=${encodeURIComponent(String(q ?? ""))}`)); }}
           >
             <div className="container-luxe flex items-center gap-3 py-4">
@@ -80,9 +79,9 @@ export function Header({ categories }: { categories: { slug: string; name: strin
       {/* Mobile menu */}
       <div className={`fixed inset-0 z-50 lg:hidden ${menu ? "" : "pointer-events-none"}`} aria-hidden={!menu}>
         <div onClick={() => setMenu(false)} className={`absolute inset-0 bg-ink/40 transition-opacity duration-500 ${menu ? "opacity-100" : "opacity-0"}`} />
-        <aside className={`absolute inset-y-0 start-0 flex w-[86%] max-w-sm flex-col bg-paper text-ink transition-transform duration-500 ease-[var(--ease-luxe)] ${menu ? "translate-x-0" : "ltr:-translate-x-full rtl:translate-x-full"}`}>
+        <aside className={`glass absolute inset-y-0 start-0 flex w-[86%] max-w-sm flex-col !bg-[#1d1f22]/85 text-ivory transition-transform duration-500 ease-[var(--ease-luxe)] ${menu ? "translate-x-0" : "ltr:-translate-x-full rtl:translate-x-full"}`}>
           <div className="flex h-[4.5rem] items-center justify-between border-b border-bone px-5">
-            <Logo className="scale-90 origin-[inherit]" />
+            <Logo tone="light" withMark className="scale-90 origin-[inherit]" />
             <button onClick={() => setMenu(false)} aria-label={dict.nav.close}><IconClose /></button>
           </div>
           <nav className="flex flex-col px-5 py-6 text-2xl font-display">

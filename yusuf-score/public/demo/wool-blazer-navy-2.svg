@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
-<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ECE6DB"/><stop offset="1" stop-color="#DCD2C1"/></linearGradient>
+<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#A3A5A9"/><stop offset="1" stop-color="#7D7F83"/></linearGradient>
 <radialGradient id="l" cx=".5" cy=".38" r=".6"><stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs>
 <rect width="800" height="1000" fill="url(#g)"/><rect width="800" height="1000" fill="url(#l)"/>
 <ellipse cx="400" cy="800" rx="230" ry="18" fill="#000" opacity=".08"/>
 <g transform="translate(0 40)" fill="#26324A" stroke="#141B2A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><path d="M295 200 L360 175 L400 330 L440 175 L505 200 L585 290 L560 640 L500 640 L500 680 L300 680 L300 640 L240 640 L215 290 Z"/><path d="M360 175 L330 300 L400 420 L470 300 L440 175" fill="none"/><line x1="400" y1="420" x2="400" y2="680"/><circle cx="410" cy="470" r="5"/><circle cx="410" cy="540" r="5"/><line x1="320" y1="520" x2="370" y2="520"/></g>
-<text x="400" y="905" text-anchor="middle" font-family="Georgia, serif" font-size="22" letter-spacing="8" fill="#8A7A5E">YUSUF SCORE</text>
-<text x="400" y="940" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" letter-spacing="4" fill="#a39a8a">WOOL BLAZER · DEMO</text>
+<text x="400" y="905" text-anchor="middle" font-family="Georgia, serif" font-size="22" letter-spacing="8" fill="#1D1F22" font-weight="700">YUSUF SCORE</text>
+<text x="400" y="940" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" letter-spacing="4" fill="#45474b">WOOL BLAZER · DEMO</text>
 </svg>

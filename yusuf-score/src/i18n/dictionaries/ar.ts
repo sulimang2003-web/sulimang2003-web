@@ -169,6 +169,8 @@ const ar = {
     privacy: "الخصوصية و KVKK",
     terms: "شروط البيع عن بُعد",
     rights: "جميع الحقوق محفوظة.",
+    location: "الموقع",
+    follow: "تابعنا للإطلالات اليومية والوصولات الجديدة",
     install: "ثبّت التطبيق",
   },
   pages: {
@@ -185,7 +187,7 @@ const ar = {
     accept: "قبول الكل",
     reject: "الضرورية فقط",
   },
-  common: { currency: "ل.ت", demo: "بيانات تجريبية", back: "رجوع", loading: "جاري التحميل..." },
+  common: { now: "الآن", currency: "ل.ت", demo: "بيانات تجريبية", back: "رجوع", loading: "جاري التحميل..." },
 };
 
 export default ar;

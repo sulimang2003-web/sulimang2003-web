@@ -15,10 +15,11 @@ const shapes = {
   polo: `<path d="M300 200 L365 180 Q400 200 435 180 L500 200 L575 260 L545 320 L505 300 L505 620 L295 620 L295 300 L255 320 L225 260 Z"/><path d="M365 180 L385 215 L400 290 L415 215 L435 180" fill="none"/><circle cx="400" cy="240" r="3.5"/><circle cx="400" cy="270" r="3.5"/>`,
 };
 
+// Silver studio backdrops matching the official YS logo
 const bgs = [
-  ["#F4EFE6", "#E9E1D3"],
-  ["#ECE6DB", "#DCD2C1"],
-  ["#2A2826", "#1C1B1A"],
+  ["#B4B6B9", "#8C8E92"],
+  ["#A3A5A9", "#7D7F83"],
+  ["#2C2E32", "#1D1F22"],
 ];
 
 function art({ shape, color, bg, label, stroke }) {
@@ -28,8 +29,8 @@ function art({ shape, color, bg, label, stroke }) {
 <rect width="800" height="1000" fill="url(#g)"/><rect width="800" height="1000" fill="url(#l)"/>
 <ellipse cx="400" cy="800" rx="230" ry="18" fill="#000" opacity=".08"/>
 <g transform="translate(0 40)" fill="${color}" stroke="${stroke}" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">${shapes[shape]}</g>
-<text x="400" y="905" text-anchor="middle" font-family="Georgia, serif" font-size="22" letter-spacing="8" fill="${bg[0] === "#2A2826" ? "#C8A96A" : "#8A7A5E"}">YUSUF SCORE</text>
-<text x="400" y="940" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" letter-spacing="4" fill="${bg[0] === "#2A2826" ? "#8f8a82" : "#a39a8a"}">${label} · DEMO</text>
+<text x="400" y="905" text-anchor="middle" font-family="Georgia, serif" font-size="22" letter-spacing="8" fill="${bg[0] === "#2C2E32" ? "#C4C6C9" : "#1D1F22"}" font-weight="700">YUSUF SCORE</text>
+<text x="400" y="940" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" letter-spacing="4" fill="${bg[0] === "#2C2E32" ? "#8b8e93" : "#45474b"}">${label} · DEMO</text>
 </svg>`;
 }
 
@@ -62,11 +63,11 @@ const hero = (w, h, file, shape, color) =>
   writeFileSync(
     join(out, file),
     `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}" preserveAspectRatio="xMidYMid slice">
-<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1d1c1a"/><stop offset=".6" stop-color="#121211"/><stop offset="1" stop-color="#0a0a0a"/></linearGradient>
-<radialGradient id="s" cx=".68" cy=".4" r=".55"><stop offset="0" stop-color="#C8A96A" stop-opacity=".22"/><stop offset="1" stop-color="#C8A96A" stop-opacity="0"/></radialGradient></defs>
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2a2c30"/><stop offset=".6" stop-color="#1d1f22"/><stop offset="1" stop-color="#141518"/></linearGradient>
+<radialGradient id="s" cx=".68" cy=".4" r=".55"><stop offset="0" stop-color="#C4C6C9" stop-opacity=".22"/><stop offset="1" stop-color="#C4C6C9" stop-opacity="0"/></radialGradient></defs>
 <rect width="${w}" height="${h}" fill="url(#g)"/><rect width="${w}" height="${h}" fill="url(#s)"/>
-<g opacity=".9" transform="translate(${w * 0.62 - 400 * (h / 1000)} ${h * 0.02}) scale(${h / 1000})" fill="${color}" stroke="#C8A96A" stroke-opacity=".35" stroke-width="2">${shapes[shape]}</g>
-<line x1="${w * 0.08}" y1="${h * 0.92}" x2="${w * 0.92}" y2="${h * 0.92}" stroke="#C8A96A" stroke-opacity=".25"/>
+<g opacity=".9" transform="translate(${w * 0.62 - 400 * (h / 1000)} ${h * 0.02}) scale(${h / 1000})" fill="${color}" stroke="#C4C6C9" stroke-opacity=".35" stroke-width="2">${shapes[shape]}</g>
+<line x1="${w * 0.08}" y1="${h * 0.92}" x2="${w * 0.92}" y2="${h * 0.92}" stroke="#C4C6C9" stroke-opacity=".25"/>
 </svg>`,
   );
 // Abstract editorial hero (monogram + light) — replace with campaign photography.
@@ -74,13 +75,13 @@ const editorial = (w, h, file) =>
   writeFileSync(
     join(out, file),
     `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}" preserveAspectRatio="xMidYMid slice">
-<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1a1917"/><stop offset=".55" stop-color="#0f0f0e"/><stop offset="1" stop-color="#070707"/></linearGradient>
-<radialGradient id="s" cx=".72" cy=".32" r=".7"><stop offset="0" stop-color="#C8A96A" stop-opacity=".20"/><stop offset=".5" stop-color="#C8A96A" stop-opacity=".05"/><stop offset="1" stop-color="#C8A96A" stop-opacity="0"/></radialGradient>
-<linearGradient id="t" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d2b87f" stop-opacity=".55"/><stop offset="1" stop-color="#d2b87f" stop-opacity=".05"/></linearGradient></defs>
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2a2c30"/><stop offset=".55" stop-color="#1d1f22"/><stop offset="1" stop-color="#141518"/></linearGradient>
+<radialGradient id="s" cx=".72" cy=".32" r=".7"><stop offset="0" stop-color="#C4C6C9" stop-opacity=".20"/><stop offset=".5" stop-color="#C4C6C9" stop-opacity=".05"/><stop offset="1" stop-color="#C4C6C9" stop-opacity="0"/></radialGradient>
+<linearGradient id="t" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e0e1e3" stop-opacity=".55"/><stop offset="1" stop-color="#e0e1e3" stop-opacity=".05"/></linearGradient></defs>
 <rect width="${w}" height="${h}" fill="url(#g)"/><rect width="${w}" height="${h}" fill="url(#s)"/>
 <text x="${w * 0.72}" y="${h * 0.62}" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="${Math.min(w, h) * 0.62}" fill="none" stroke="url(#t)" stroke-width="1.2" letter-spacing="-10">YS</text>
-<g stroke="#C8A96A" stroke-opacity=".18" fill="none"><circle cx="${w * 0.72}" cy="${h * 0.4}" r="${Math.min(w, h) * 0.42}"/><circle cx="${w * 0.72}" cy="${h * 0.4}" r="${Math.min(w, h) * 0.3}"/></g>
-<line x1="${w * 0.72}" y1="0" x2="${w * 0.72}" y2="${h}" stroke="#C8A96A" stroke-opacity=".08"/>
+<g stroke="#C4C6C9" stroke-opacity=".18" fill="none"><circle cx="${w * 0.72}" cy="${h * 0.4}" r="${Math.min(w, h) * 0.42}"/><circle cx="${w * 0.72}" cy="${h * 0.4}" r="${Math.min(w, h) * 0.3}"/></g>
+<line x1="${w * 0.72}" y1="0" x2="${w * 0.72}" y2="${h}" stroke="#C4C6C9" stroke-opacity=".08"/>
 </svg>`,
   );
 editorial(1600, 1000, "hero.svg");

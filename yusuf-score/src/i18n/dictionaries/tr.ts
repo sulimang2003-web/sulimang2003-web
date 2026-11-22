@@ -171,6 +171,8 @@ const tr: Dictionary = {
     privacy: "Gizlilik ve KVKK",
     terms: "Mesafeli Satış Sözleşmesi",
     rights: "Tüm hakları saklıdır.",
+    location: "Konum",
+    follow: "Günlük kombinler ve yeni gelenler için takip edin",
     install: "Uygulamayı Yükle",
   },
   pages: {
@@ -187,7 +189,7 @@ const tr: Dictionary = {
     accept: "Tümünü Kabul Et",
     reject: "Yalnızca Zorunlu",
   },
-  common: { currency: "TL", demo: "Demo veri", back: "Geri", loading: "Yükleniyor..." },
+  common: { now: "şimdi", currency: "TL", demo: "Demo veri", back: "Geri", loading: "Yükleniyor..." },
 };
 
 export default tr;

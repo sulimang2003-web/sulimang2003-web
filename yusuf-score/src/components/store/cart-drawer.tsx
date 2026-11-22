@@ -63,7 +63,7 @@ export function CartDrawer() {
                 </li>
               ))}
             </ul>
-            <div className="border-t border-bone px-6 py-5 space-y-3 bg-ivory/60">
+            <div className="border-t border-bone px-6 py-5 space-y-3 bg-white/[0.03] backdrop-blur-xl">
               <div className="flex justify-between"><span>{dict.cart.subtotal}</span><span>{formatTRY(subtotalMinor, locale)}</span></div>
               <p className="text-xs text-smoke">{dict.cart.shipping}: {dict.cart.shippingCalc} · {dict.cart.vatNote}</p>
               <Link href={`/${locale}/checkout`} onClick={() => setDrawerOpen(false)} className="btn btn-dark w-full">{dict.cart.checkout}</Link>

@@ -3,15 +3,15 @@ import { getAdmin } from "@/lib/auth";
 import { isSupabaseConfigured } from "@/lib/data";
 import { login } from "../actions";
 import { ActionForm, Submit } from "@/components/admin/ui";
-import { Logo } from "@/components/store/logo";
+import { Logo, LogoMark } from "@/components/store/logo";
 
 export default async function Login() {
   if (await getAdmin()) redirect("/admin");
   const demo = !isSupabaseConfigured();
   return (
-    <div className="grid min-h-dvh place-items-center bg-ink px-5">
+    <div className="grid min-h-dvh place-items-center bg-[radial-gradient(70%_60%_at_50%_35%,#3a3d42,#1d1f22)] px-5">
       <div className="w-full max-w-sm bg-paper p-8">
-        <div className="mb-8 text-center"><Logo /></div>
+        <div className="mb-8 flex flex-col items-center gap-4"><LogoMark size={96} priority /><Logo /></div>
         <ActionForm action={login} className="space-y-4">
           <div><label className="label" htmlFor="email">البريد الإلكتروني</label><input id="email" name="email" type="email" required dir="ltr" autoComplete="username" className="field" /></div>
           <div><label className="label" htmlFor="password">كلمة المرور</label><input id="password" name="password" type="password" required dir="ltr" autoComplete="current-password" className="field" /></div>

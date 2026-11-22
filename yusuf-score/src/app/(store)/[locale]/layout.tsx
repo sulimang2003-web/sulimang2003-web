@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
-import { Cormorant_Garamond, Jost, IBM_Plex_Sans_Arabic, Amiri } from "next/font/google";
+import { Cormorant_Garamond, Jost, IBM_Plex_Sans_Arabic, Amiri, Playfair_Display } from "next/font/google";
 import "../../globals.css";
 import { dirOf, isLocale, locales } from "@/i18n/config";
 import { getDictionary } from "@/i18n";
@@ -11,6 +11,7 @@ import { StoreProvider } from "@/components/store/store-context";
 import { Header } from "@/components/store/header";
 import { Footer } from "@/components/store/footer";
 import { CartDrawer } from "@/components/store/cart-drawer";
+import { Toaster } from "@/components/store/toaster";
 import { WhatsAppFab } from "@/components/store/whatsapp-fab";
 import { RevealObserver } from "@/components/store/reveal";
 import { ConsentAndAnalytics } from "@/components/store/analytics";
@@ -20,6 +21,7 @@ export const dynamic = "force-dynamic";
 const cormorant = Cormorant_Garamond({ subsets: ["latin", "latin-ext"], weight: ["300", "400", "500"], style: ["normal", "italic"], variable: "--font-cormorant", display: "swap" });
 const jost = Jost({ subsets: ["latin", "latin-ext"], weight: ["300", "400", "500"], variable: "--font-jost", display: "swap" });
 const plexAr = IBM_Plex_Sans_Arabic({ subsets: ["arabic"], weight: ["300", "400", "500"], variable: "--font-plex-ar", display: "swap" });
+const playfair = Playfair_Display({ subsets: ["latin"], weight: ["500", "700"], variable: "--font-playfair", display: "swap" });
 const amiri = Amiri({ subsets: ["arabic"], weight: ["400", "700"], variable: "--font-amiri", display: "swap" });
 
 export function generateStaticParams() {
@@ -38,12 +40,12 @@ export async function generateMetadata({ params }: LayoutProps<"/[locale]">): Pr
     appleWebApp: { capable: true, title: "Yusuf Score", statusBarStyle: "black-translucent" },
     alternates: { languages: Object.fromEntries(locales.map((l) => [l, `/${l}`])) },
     openGraph: { type: "website", siteName: "YUSUF SCORE", locale: locale === "ar" ? "ar_TR" : "tr_TR", title: d.meta.title, description: d.meta.description },
-    icons: { icon: "/icons/icon.svg", apple: "/icons/apple-touch-icon.png" },
+    icons: { icon: "/icons/favicon-64.png", apple: "/icons/apple-touch-icon.png" },
   };
 }
 
 export const viewport: Viewport = {
-  themeColor: "#0e0e0d",
+  themeColor: "#1d1f22",
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
@@ -61,13 +63,15 @@ export default async function StoreLayout({ children, params }: LayoutProps<"/[l
     email: settings.email,
   };
   return (
-    <html lang={locale} dir={dirOf(locale)} className={`${cormorant.variable} ${jost.variable} ${plexAr.variable} ${amiri.variable}`}>
+    <html lang={locale} dir={dirOf(locale)} className={`theme-night ${cormorant.variable} ${jost.variable} ${plexAr.variable} ${amiri.variable} ${playfair.variable}`}>
       <body className="min-h-dvh flex flex-col">
+        <div className="night-backdrop" aria-hidden />
         <StoreProvider locale={locale} dict={dict} settings={pub}>
           <Header categories={categories.map((c) => ({ slug: c.slug, name: t(c.name, locale) }))} />
           <main className="flex-1">{children}</main>
           <Footer dict={dict} locale={locale} settings={settings} />
           <CartDrawer />
+          <Toaster />
           <WhatsAppFab />
           <RevealObserver />
           <ConsentAndAnalytics text={dict.consent.text} accept={dict.consent.accept} reject={dict.consent.reject} />

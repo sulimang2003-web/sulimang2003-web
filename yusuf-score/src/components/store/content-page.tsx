@@ -7,7 +7,7 @@ export function ContentPage({ eyebrow, title, intro, sections, notice }: {
       {eyebrow && <p className="eyebrow">{eyebrow}</p>}
       <h1 className="heading-display mt-3 text-4xl md:text-6xl">{title}</h1>
       {intro && <p className="mt-6 text-lg leading-relaxed text-smoke">{intro}</p>}
-      {notice && <p className="mt-6 border-s-2 border-gold bg-ivory px-4 py-3 text-sm text-graphite">{notice}</p>}
+      {notice && <p className="mt-6 border-s-2 border-gold bg-white/[0.04] backdrop-blur-xl border border-bone px-4 py-3 text-sm text-graphite">{notice}</p>}
       <div className="prose-luxe mt-6">
         {sections.map((s) => (
           <section key={s.h}>

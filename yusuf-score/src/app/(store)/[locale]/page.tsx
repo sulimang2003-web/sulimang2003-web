@@ -5,6 +5,7 @@ import type { Locale } from "@/i18n/config";
 import { repo } from "@/lib/data";
 import { t } from "@/lib/format";
 import { ProductCard } from "@/components/store/product-card";
+import { LogoMark } from "@/components/store/logo";
 import { IconArrow, IconExchange, IconInstagram, IconStore, IconTruck, IconWhatsApp } from "@/components/icons";
 
 export default async function Home({ params }: PageProps<"/[locale]">) {
@@ -23,28 +24,29 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
 
   return (
     <>
-      {/* ── HERO ── */}
-      <section className="relative h-[100svh] min-h-[620px] overflow-hidden bg-ink text-ivory">
-        <picture>
-          <source media="(min-width: 768px)" srcSet="/demo/hero.svg" />
-          <img src="/demo/hero-mobile.svg" alt="" className="absolute inset-0 h-full w-full object-cover animate-fade-in" />
-        </picture>
-        <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-ink/40" />
-        <div className="container-luxe relative flex h-full flex-col justify-end pb-16 md:pb-24">
-          <p className="eyebrow !text-gold-soft animate-fade-up">{d.home.heroEyebrow}</p>
-          <h1 className="heading-display mt-5 max-w-3xl whitespace-pre-line text-[2.9rem] sm:text-6xl md:text-7xl lg:text-[5.6rem] animate-fade-up [animation-delay:120ms]">
-            {d.home.heroTitle}
-          </h1>
-          <p className="mt-6 max-w-md text-ivory/75 leading-relaxed animate-fade-up [animation-delay:240ms]">{d.home.heroText}</p>
-          <div className="mt-9 flex flex-wrap gap-3 animate-fade-up [animation-delay:360ms]">
-            <Link href={L("/shop")} className="btn btn-light">{d.home.shopCollection} <IconArrow width={16} /></Link>
-            <Link href={L("/shop?tag=new")} className="btn btn-outline text-ivory hover:!bg-ivory hover:!text-ink hover:!border-ivory">{d.nav.newIn}</Link>
+      {/* ── HERO — blurred charcoal + circular YS mark, like the brand profile ── */}
+      <section className="relative -mt-[4.5rem] flex min-h-[100svh] items-center overflow-hidden pt-[4.5rem]">
+        <div className="pointer-events-none absolute left-1/2 top-[38%] h-[90vmin] w-[90vmin] -translate-x-1/2 -translate-y-1/2 bg-[radial-gradient(closest-side,rgba(255,255,255,.08),transparent)]" />
+        <div className="container-luxe relative grid items-center gap-10 py-16 md:grid-cols-2 md:gap-16">
+          <div className="order-1 flex justify-center md:order-2">
+            <LogoMark size={520} priority className="h-[62vw] max-h-[30rem] w-[62vw] max-w-[30rem] animate-fade-in !shadow-none md:h-[26rem] md:w-[26rem]" />
+          </div>
+          <div className="order-2 text-center md:order-1 md:text-start">
+            <p className="eyebrow animate-fade-up">{d.home.heroEyebrow}</p>
+            <h1 className="heading-display silver-text mt-5 whitespace-pre-line text-[2.6rem] sm:text-6xl lg:text-[4.8rem] animate-fade-up [animation-delay:120ms]">
+              {d.home.heroTitle}
+            </h1>
+            <p className="mx-auto mt-6 max-w-md leading-relaxed text-ivory/70 md:mx-0 animate-fade-up [animation-delay:240ms]">{d.home.heroText}</p>
+            <div className="mt-9 flex flex-wrap justify-center gap-3 md:justify-start animate-fade-up [animation-delay:360ms]">
+              <Link href={L("/shop")} className="btn btn-light rounded-full">{d.home.shopCollection} <IconArrow width={16} /></Link>
+              <Link href={L("/shop?tag=new")} className="btn btn-dark rounded-full">{d.nav.newIn}</Link>
+            </div>
           </div>
         </div>
       </section>
 
       {/* ── MARQUEE ── */}
-      <div className="overflow-hidden border-b border-bone bg-ivory py-4" dir="ltr">
+      <div className="glass overflow-hidden !border-x-0 py-4" dir="ltr">
         <div className="flex w-max animate-marquee gap-12 whitespace-nowrap font-display text-lg italic text-smoke">
           {Array.from({ length: 2 }).flatMap((_, k) =>
             ["Crafted in Istanbul", "Fatih · Since day one", "Premium Menswear", "Order via WhatsApp", "@yusufscore"].map((x, i) => (
@@ -67,7 +69,7 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
       </section>
 
       {/* ── CATEGORIES ── */}
-      <section className="bg-ivory py-20 md:py-28">
+      <section className="bg-white/[0.04] backdrop-blur-xl border border-bone py-20 md:py-28">
         <div className="container-luxe">
           <SectionHead eyebrow={d.home.discover} title={d.home.categories} />
           <div className="mt-10 grid grid-cols-2 gap-3 md:grid-cols-5 md:gap-5">
@@ -96,7 +98,7 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
       </section>
 
       {/* ── STORY ── */}
-      <section className="bg-ink text-ivory">
+      <section className="glass !border-x-0 text-ivory">
         <div className="container-luxe grid items-center gap-12 py-20 md:grid-cols-2 md:gap-20 md:py-28">
           <div className="reveal relative aspect-square overflow-hidden">
             <Image src="/demo/story.svg" alt="" fill sizes="(min-width:768px) 50vw, 100vw" className="object-cover" />
@@ -112,8 +114,8 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
       </section>
 
       {/* ── PERKS ── */}
-      <section className="border-b border-bone">
-        <div className="container-luxe grid grid-cols-2 gap-px bg-bone md:grid-cols-4">
+      <section>
+        <div className="container-luxe grid grid-cols-2 gap-3 py-10 md:grid-cols-4">
           {[
             [IconTruck, d.perks.shipping, d.perks.shippingText],
             [IconWhatsApp, d.perks.whatsapp, d.perks.whatsappText],
@@ -122,7 +124,7 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
           ].map(([Icon, title, text], i) => {
             const I = Icon as typeof IconTruck;
             return (
-              <div key={i} className="bg-paper px-4 py-10 md:px-8 md:py-14">
+              <div key={i} className="glass rounded-2xl px-5 py-8 md:px-8 md:py-12">
                 <I className="text-gold" width={26} height={26} />
                 <p className="mt-5 font-display text-xl">{title as string}</p>
                 <p className="mt-2 text-sm leading-relaxed text-smoke">{text as string}</p>
@@ -150,7 +152,7 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
       </section>
 
       {/* ── VISIT ── */}
-      <section className="bg-ivory">
+      <section className="bg-white/[0.04] backdrop-blur-xl border border-bone">
         <div className="container-luxe flex flex-col items-center gap-4 py-16 text-center">
           <IconStore className="text-gold" width={28} height={28} />
           <h2 className="heading-display text-3xl">{d.home.visitTitle}</h2>

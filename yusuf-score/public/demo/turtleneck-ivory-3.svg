@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
-<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2A2826"/><stop offset="1" stop-color="#1C1B1A"/></linearGradient>
+<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2C2E32"/><stop offset="1" stop-color="#1D1F22"/></linearGradient>
 <radialGradient id="l" cx=".5" cy=".38" r=".6"><stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs>
 <rect width="800" height="1000" fill="url(#g)"/><rect width="800" height="1000" fill="url(#l)"/>
 <ellipse cx="400" cy="800" rx="230" ry="18" fill="#000" opacity=".08"/>
 <g transform="translate(0 40)" fill="#EEE7D8" stroke="#B7AA90" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><path d="M300 200 Q400 240 500 200 L590 290 L560 610 L510 610 L505 300 L505 640 L295 640 L295 300 L290 610 L240 610 L210 290 Z"/><path d="M345 205 Q400 260 455 205" fill="none"/><line x1="295" y1="615" x2="505" y2="615"/><line x1="295" y1="625" x2="505" y2="625"/></g>
-<text x="400" y="905" text-anchor="middle" font-family="Georgia, serif" font-size="22" letter-spacing="8" fill="#C8A96A">YUSUF SCORE</text>
-<text x="400" y="940" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" letter-spacing="4" fill="#8f8a82">TURTLENECK · DEMO</text>
+<text x="400" y="905" text-anchor="middle" font-family="Georgia, serif" font-size="22" letter-spacing="8" fill="#C4C6C9" font-weight="700">YUSUF SCORE</text>
+<text x="400" y="940" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" letter-spacing="4" fill="#8b8e93">TURTLENECK · DEMO</text>
 </svg>

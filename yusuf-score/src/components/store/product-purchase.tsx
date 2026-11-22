@@ -8,7 +8,7 @@ import { IconMinus, IconPlus, IconWhatsApp } from "../icons";
 import { track } from "./analytics";
 
 export function ProductPurchase({ p, url }: { p: Product; url: string }) {
-  const { dict, locale, add, settings } = useStore();
+  const { dict, locale, add, settings, notify, setDrawerOpen } = useStore();
   const [color, setColor] = useState(p.colors.find((c) => p.variants.some((v) => v.color === c.code && v.stock > 0))?.code ?? p.colors[0]?.code);
   const [size, setSize] = useState<string | null>(null);
   const [qty, setQty] = useState(1);
@@ -34,6 +34,12 @@ export function ProductPurchase({ p, url }: { p: Product; url: string }) {
       productId: p.id, slug: p.slug, sku: p.sku, name: p.name, image: p.images[0], size, color: color!,
       colorName: colorObj!.name, priceMinor: p.priceMinor, qty, maxQty: Math.min(stock, 20),
     });
+    notify({
+      title: dict.product.added,
+      body: `${t(p.name, locale)} · ${size} · ${colorObj ? t(colorObj.name, locale) : ""}`,
+      image: p.images[0],
+      action: { label: dict.nav.cart, onClick: () => setDrawerOpen(true) },
+    });
     track("AddToCart", { content_ids: [p.sku], value: (p.priceMinor * qty) / 100, currency: "TRY" });
   };
 
@@ -46,7 +52,7 @@ export function ProductPurchase({ p, url }: { p: Product; url: string }) {
           <div className="flex gap-3">
             {p.colors.map((c) => (
               <button key={c.code} onClick={() => { setColor(c.code); setSize(null); setQty(1); }} aria-pressed={c.code === color} aria-label={t(c.name, locale)}
-                className={`h-9 w-9 rounded-full ring-offset-2 ring-offset-paper transition ${c.code === color ? "ring-2 ring-ink" : "ring-1 ring-stone/40 hover:ring-ink/60"}`} style={{ background: c.hex }} />
+                className={`h-9 w-9 rounded-full ring-offset-2 ring-offset-paper transition ${c.code === color ? "ring-2 ring-ivory" : "ring-1 ring-stone/40 hover:ring-ivory/60"}`} style={{ background: c.hex }} />
             ))}
           </div>
         </div>
@@ -84,7 +90,7 @@ export function ProductPurchase({ p, url }: { p: Product; url: string }) {
       </div>
 
       <div className="space-y-3">
-        <button onClick={onAdd} disabled={allOut} className="btn btn-dark w-full">
+        <button onClick={onAdd} disabled={allOut} className="btn btn-light w-full">
           {allOut ? dict.product.soldOut : `${dict.product.addToCart} — ${formatTRY(p.priceMinor * qty, locale)}`}
         </button>
         <a href={wa} target="_blank" rel="noopener" onClick={() => track("Contact", { content_ids: [p.sku] })} className="btn btn-wa w-full">

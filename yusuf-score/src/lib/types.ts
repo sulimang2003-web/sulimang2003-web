@@ -142,6 +142,7 @@ export interface StoreSettings {
   vatRate: number; // percent, configurable — confirm with accountant
   shipping: ShippingSettings;
   paymentProvider: "none" | "iyzico" | "paytr";
+  socials?: { tiktok?: string; facebook?: string; snapchat?: string; youtube?: string; mapsUrl?: string };
   announcement?: Localized;
 }
 

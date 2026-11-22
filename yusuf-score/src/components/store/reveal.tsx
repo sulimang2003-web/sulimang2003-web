@@ -6,7 +6,7 @@ export function RevealObserver() {
   useEffect(() => {
     document.documentElement.classList.add("js-reveal"); // content stays visible if JS fails
     const io = new IntersectionObserver(
-      (entries) => entries.forEach((e) => e.isIntersecting && (e.target.classList.add("is-visible"), io.unobserve(e.target))),
+      (entries) => entries.forEach((e) => (e.isIntersecting || e.boundingClientRect.top < 0) && (e.target.classList.add("is-visible"), io.unobserve(e.target))),
       { rootMargin: "0px 0px -8% 0px" },
     );
     const scan = () => document.querySelectorAll(".reveal:not(.is-visible)").forEach((el) => io.observe(el));

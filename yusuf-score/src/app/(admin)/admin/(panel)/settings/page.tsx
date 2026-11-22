@@ -24,6 +24,14 @@ export default async function Settings() {
           <p className="self-end text-xs text-smoke">⚠️ يجب تأكيد نسبة الضريبة المطبقة على كل فئة مع المحاسب (Mali Müşavir).</p>
         </Card>
         <Card className="grid gap-4 md:grid-cols-3">
+          <p className="font-medium md:col-span-3">حسابات التواصل الاجتماعي <span className="text-xs text-smoke">(تظهر تحت الشعار أسفل كل صفحة — اترك الحقل فارغاً لإخفائه)</span></p>
+          <div><label className="label">TikTok (اسم المستخدم)</label><input name="tiktok" defaultValue={s.socials?.tiktok ?? ""} dir="ltr" className="field bg-white" placeholder="yusufscore" /></div>
+          <div><label className="label">Snapchat (اسم المستخدم)</label><input name="snapchat" defaultValue={s.socials?.snapchat ?? ""} dir="ltr" className="field bg-white" /></div>
+          <div><label className="label">Facebook (رابط https)</label><input name="facebook" defaultValue={s.socials?.facebook ?? ""} dir="ltr" className="field bg-white" /></div>
+          <div><label className="label">YouTube (رابط https)</label><input name="youtube" defaultValue={s.socials?.youtube ?? ""} dir="ltr" className="field bg-white" /></div>
+          <div className="md:col-span-2"><label className="label">رابط الموقع على Google Maps</label><input name="mapsUrl" defaultValue={s.socials?.mapsUrl ?? ""} dir="ltr" className="field bg-white" /></div>
+        </Card>
+        <Card className="grid gap-4 md:grid-cols-3">
           <p className="font-medium md:col-span-3">الشحن</p>
           <div><label className="label">داخل إسطنبول (ل.ت)</label><input name="istanbul" type="number" step="0.01" defaultValue={tl(s.shipping.istanbulMinor)} className="field bg-white" /></div>
           <div><label className="label">باقي تركيا (ل.ت)</label><input name="turkey" type="number" step="0.01" defaultValue={tl(s.shipping.turkeyMinor)} className="field bg-white" /></div>
