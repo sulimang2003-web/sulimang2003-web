@@ -2,7 +2,7 @@ Sulaiman Jamous
 
 SJ
 
-AI Developer | Computer Engineering Graduate
+Software & AI Developer | Computer Engineering Graduate
 
 Profile
 
@@ -17,7 +17,7 @@ Riyadh, Saudi Arabia
 
 Skills
 
-Talla — Full-Stack Delivery Platform
+Talla — Founder & Software Developer
 
 Python
 
@@ -65,14 +65,14 @@ n8n
 
 Computer Engineering graduate (Üsküdar University, 2026) who builds complete
 software products, from a four-app delivery platform to WhatsApp automation and
-a loyalty SaaS, plus machine learning projects in Python. Seeking an AI Developer
-role in Saudi Arabia.
+a loyalty SaaS, plus machine learning projects in Python. Seeking Software
+Development or AI Developer roles in Saudi Arabia.
 
 PostgreSQL
 
-Designed and built an end-to-end delivery platform for Al-Tall, Syria, on a
-secured PostgreSQL backend: 133 commits, 47 database migrations, and
-7 edge functions.
+Founded and built an end-to-end delivery and gift-services platform for
+the Syrian market (Al-Tall) on a secured PostgreSQL backend: 133
+commits, 47 database migrations, and 7 edge functions.
 Customer: browse, order, track · Shop: orders, menu, drivers · Driver:
 pickup, deliver, cash · Admin: revenue, shops, orders.
 
