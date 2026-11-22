@@ -55,22 +55,25 @@ aside h3::after{content:"";flex:1;height:1px;background:rgba(196,154,82,.45)}
 .certs small{font-size:7.6pt;color:#aeb6c6}
 
 /* ---------- main (left in RTL) ---------- */
-main{flex:1;padding:12mm 11mm 9mm 10mm;display:flex;flex-direction:column}
+main{flex:1;padding:10.5mm 11mm 7mm 10mm;display:flex;flex-direction:column}
 header h1{font-size:28pt;letter-spacing:.2px;font-weight:700;line-height:1.15;color:var(--navy)}
 header .role{font-size:11pt;font-weight:600;color:var(--gold);margin-top:1mm}
 .orn{display:flex;align-items:center;gap:2mm;margin:3mm 0 0}
 .orn::before,.orn::after{content:"";height:1px;background:var(--line);flex:1}
 .orn::before{flex:0 0 22mm;background:var(--gold);height:1.5px}
 .orn i{width:2.2mm;height:2.2mm;background:var(--gold);transform:rotate(45deg)}
-.sections{flex:1;display:flex;flex-direction:column;justify-content:space-between;margin-top:4mm}
+.sections{flex:1;display:flex;flex-direction:column;justify-content:space-between;gap:2.2mm;margin-top:3.5mm}
 section h2{font-size:11.6pt;font-weight:700;color:var(--navy);display:flex;align-items:center;gap:2.6mm;margin-bottom:2.4mm}
 section h2::before{content:"";width:2.4mm;height:2.4mm;background:var(--gold);transform:rotate(45deg);flex:none}
 section h2::after{content:"";flex:1;height:1px;background:var(--line)}
 .summary{text-align:left;color:#2c3445;font-size:9.1pt}
 .tl{position:relative;padding-inline-start:5.5mm}
 .tl::before{content:"";position:absolute;inset-inline-start:1.05mm;top:1.8mm;bottom:1.5mm;width:1px;background:var(--line)}
-.item{position:relative;margin-bottom:3mm}
+.item{position:relative;margin-bottom:2.7mm}
 .item:last-child{margin-bottom:0}
+.item.featured{background:#f3ecdd;border-radius:2mm;padding:1.6mm 2.4mm 1.8mm;margin-inline-start:-1.2mm}
+.item.featured::before{inset-inline-start:-4.3mm}
+.item li b{font-weight:600;color:var(--navy)}
 .item::before{content:"";position:absolute;inset-inline-start:-5.5mm;top:1.5mm;width:2.2mm;height:2.2mm;border-radius:50%;
   border:1.3px solid var(--gold);background:var(--paper)}
 .ihead{display:flex;justify-content:space-between;align-items:baseline;gap:3mm}
@@ -139,53 +142,18 @@ section h2::after{content:"";flex:1;height:1px;background:var(--line)}
   <div class="sections">
   <section>
     <h2>Profile</h2>
-    <p class="summary">Computer Engineering graduate from Üsküdar University (2026) specializing in artificial intelligence and generative AI. Experienced in Python, machine learning, workflow automation with n8n, and SaaS platform development. Seeking an AI Developer role in Saudi Arabia.</p>
-  </section>
-
-  <section>
-    <h2>Experience</h2>
-    <div class="tl">
-      <div class="item">
-        <div class="ihead"><h3>Sales Representative&nbsp;</h3><span class="date">Oct 2026 – Present</span></div>
-        <div class="org">Jaykum — Tech Solutions for Restaurants &amp; Cafés · Riyadh</div>
-        <ul><li>Presented technology solutions, including point-of-sale, ordering, and other systems, to restaurant and café owners.</li></ul>
-      </div>
-      <div class="item">
-        <div class="ihead"><h3>Hardware &amp; Software Trainee&nbsp;</h3><span class="date">Jun 2024 – Feb 2025</span></div>
-        <div class="org">Al-Sanduq Al-Amen Security Company · Riyadh</div>
-        <ul><li>Installed and maintained security devices and their software for government projects.</li></ul>
-      </div>
-      <div class="item">
-        <div class="ihead"><h3>Warehouse Keeper&nbsp;</h3><span class="date">2020 – 2021</span></div>
-        <div class="org">Al-Jameel Optics · Riyadh</div>
-        <ul><li>Managed inventory and stock records.</li></ul>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Freelance</h2>
-    <div class="tl">
-      <div class="item">
-        <div class="ihead"><h3>Lamha Tech&nbsp;</h3><span class="date">Present</span></div>
-        <div class="org">Websites, automation, and booking systems for small businesses</div>
-        <ul>
-          <li>Clients: Al-Sanduq Al-Amen Security Company · Al-Jameel Optics · Thalatha Funoon Contracting.</li>
-          <li>Built a responsive Arabic website for Thalatha Funoon Contracting <span class="stack" style="white-space:nowrap">(HTML · CSS · JavaScript)</span>.</li>
-        </ul>
-      </div>
-    </div>
+    <p class="summary">Computer Engineering graduate (Üsküdar University, 2026) who builds complete software products, from a four-app delivery platform to WhatsApp automation and a loyalty SaaS, plus machine learning projects in Python. Seeking an AI Developer role in Saudi Arabia.</p>
   </section>
 
   <section>
     <h2>Selected Projects</h2>
     <div class="tl">
-      <div class="item">
+      <div class="item featured">
         <div class="ihead"><h3>Talla — Full-Stack Delivery Platform&nbsp;</h3><span class="date">2026</span></div>
         <div class="stack">TypeScript · JavaScript · Supabase · PostgreSQL · PWA · Capacitor</div>
         <ul>
-          <li>Designed and built a delivery platform for Al-Tall, Syria, with four apps: customer app, shop dashboard, driver app, and admin panel, on a secured PostgreSQL backend.</li>
-          <li>133 commits, 47 database migrations, and 7 edge functions.</li>
+          <li>Designed and built an end-to-end delivery platform for Al-Tall, Syria, on a secured PostgreSQL backend: 133 commits, 47 database migrations, and 7 edge functions.</li>
+          <li><b>Customer:</b> browse, order, track · <b>Shop:</b> orders, menu, drivers · <b>Driver:</b> pickup, deliver, cash · <b>Admin:</b> revenue, shops, orders.</li>
         </ul>
       </div>
       <div class="item">
@@ -202,6 +170,40 @@ section h2::after{content:"";flex:1;height:1px;background:var(--line)}
         <h3 class="ihead"><span>Digital Loyalty SaaS Platform — Co-Founder</span></h3>
         <div class="stack">Apple Wallet · Google Wallet · Supabase</div>
         <ul><li>Mobile digital loyalty cards for cafés, salons, and car washes.</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Freelance</h2>
+    <div class="tl">
+      <div class="item">
+        <div class="ihead"><h3>Lamha Tech&nbsp;</h3><span class="date">Present</span></div>
+        <div class="org">Websites, automation, and booking systems for small businesses</div>
+        <ul>
+          <li>Clients: Al-Sanduq Al-Amen Security Company · Al-Jameel Optics · Thalatha Funoon Contracting (responsive Arabic website in HTML, CSS, JavaScript).</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+    <div class="tl">
+      <div class="item">
+        <div class="ihead"><h3>Sales Representative&nbsp;</h3><span class="date">Oct 2026 – Present</span></div>
+        <div class="org">Jaykum — Tech Solutions for Restaurants &amp; Cafés · Riyadh</div>
+        <ul><li>Presented tech solutions (point-of-sale, ordering, and other systems) to restaurant and café owners.</li></ul>
+      </div>
+      <div class="item">
+        <div class="ihead"><h3>Hardware &amp; Software Trainee&nbsp;</h3><span class="date">Jun 2024 – Feb 2025</span></div>
+        <div class="org">Al-Sanduq Al-Amen Security Company · Riyadh</div>
+        <ul><li>Installed and maintained security devices and their software for government projects.</li></ul>
+      </div>
+      <div class="item">
+        <div class="ihead"><h3>Warehouse Keeper&nbsp;</h3><span class="date">2020 – 2021</span></div>
+        <div class="org">Al-Jameel Optics · Riyadh</div>
+        <ul><li>Managed inventory and stock records.</li></ul>
       </div>
     </div>
   </section>

@@ -11,17 +11,15 @@ Contact
 sulimang2003@gmail.com
 linkedin.com/in/sulaiman-jamous-2699321a3
 
-Experience
+Selected Projects
 
 Riyadh, Saudi Arabia
 
-Sales Representative
-
 Skills
-Python
 
-Presented technology solutions, including point-of-sale, ordering, and other
-systems, to restaurant and café owners.
+Talla — Full-Stack Delivery Platform
+
+Python
 
 TypeScript
 
@@ -30,10 +28,6 @@ JavaScript
 HTML
 
 CSS
-
-Hardware & Software Trainee
-
-Al-Sanduq Al-Amen Security Company · Riyadh
 
 AI & Data
 Machine Learning
@@ -55,48 +49,60 @@ Google Wallet
 
 Capacitor
 
-Jun 2024 – Feb 2025
-
-Installed and maintained security devices and their software for government
-projects.
-
-Warehouse Keeper
-
-Al-Jameel Optics · Riyadh
-
-2020 – 2021
-
-Managed inventory and stock records.
-
-Freelance
-Lamha Tech
-
-Websites, automation, and booking systems for small businesses
-
 Automation
 Workflow Automation
 
 Databases & Hosting
 Supabase
 
-Oct 2026 – Present
+2026
 
-Jaykum — Tech Solutions for Restaurants & Cafés · Riyadh
+TypeScript · JavaScript · Supabase · PostgreSQL · PWA · Capacitor
 
 Programming
 
 n8n
 
-Computer Engineering graduate from Üsküdar University (2026) specializing in
-artificial intelligence and generative AI. Experienced in Python, machine learning,
-workflow automation with n8n, and SaaS platform development. Seeking an AI
-Developer role in Saudi Arabia.
+Computer Engineering graduate (Üsküdar University, 2026) who builds complete
+software products, from a four-app delivery platform to WhatsApp automation and
+a loyalty SaaS, plus machine learning projects in Python. Seeking an AI Developer
+role in Saudi Arabia.
 
 PostgreSQL
 
+Designed and built an end-to-end delivery platform for Al-Tall, Syria, on a
+secured PostgreSQL backend: 133 commits, 47 database migrations, and
+7 edge functions.
+Customer: browse, order, track · Shop: orders, menu, drivers · Driver:
+pickup, deliver, cash · Admin: revenue, shops, orders.
+
+AI Job Market Analysis
+
+Python · pandas · scikit-learn · FastAPI
+
+Analyzed AI job postings and matched resumes to jobs using machine
+learning.
+
+WhatsApp Subscription Renewal Reminders
+
+n8n · WhatsApp Cloud API · Supabase · PostgreSQL · Hetzner
+
+Automated WhatsApp reminders sent before subscription expiry, with a
+manual approval queue.
+
+Digital Loyalty SaaS Platform — Co-Founder
+Apple Wallet · Google Wallet · Supabase
+
+Mobile digital loyalty cards for cafés, salons, and car washes.
+
 Hetzner
 
+Freelance
+
 Hardware
+
+Lamha Tech
+
 Security Systems Installation &
 Maintenance
 
@@ -119,43 +125,39 @@ Python for Data Science, AI &
 Development
 IBM · Coursera · 2026
 
+Websites, automation, and booking systems for small businesses
+
 Present
 
 Clients: Al-Sanduq Al-Amen Security Company · Al-Jameel Optics · Thalatha
-Funoon Contracting.
-Built a responsive Arabic website for Thalatha Funoon Contracting
-(HTML · CSS · JavaScript).
+Funoon Contracting (responsive Arabic website in HTML, CSS, JavaScript).
 
-Selected Projects
-Talla — Full-Stack Delivery Platform
+Experience
+Sales Representative
 
-TypeScript · JavaScript · Supabase · PostgreSQL · PWA · Capacitor
+Jaykum — Tech Solutions for Restaurants & Cafés · Riyadh
 
-2026
+Oct 2026 – Present
 
-Designed and built a delivery platform for Al-Tall, Syria, with four apps:
-customer app, shop dashboard, driver app, and admin panel, on a secured
-PostgreSQL backend.
-133 commits, 47 database migrations, and 7 edge functions.
+Presented tech solutions (point-of-sale, ordering, and other systems) to
+restaurant and café owners.
 
-AI Job Market Analysis
+Hardware & Software Trainee
 
-Python · pandas · scikit-learn · FastAPI
+Al-Sanduq Al-Amen Security Company · Riyadh
 
-Analyzed AI job postings and matched resumes to jobs using machine
-learning.
+Jun 2024 – Feb 2025
 
-WhatsApp Subscription Renewal Reminders
+Installed and maintained security devices and their software for government
+projects.
 
-n8n · WhatsApp Cloud API · Supabase · PostgreSQL · Hetzner
+Warehouse Keeper
 
-Automated WhatsApp reminders sent before subscription expiry, with a
-manual approval queue.
+Al-Jameel Optics · Riyadh
 
-Digital Loyalty SaaS Platform — Co-Founder
-Apple Wallet · Google Wallet · Supabase
+2020 – 2021
 
-Mobile digital loyalty cards for cafés, salons, and car washes.
+Managed inventory and stock records.
 
 Education
 B.Sc. in Computer Engineering

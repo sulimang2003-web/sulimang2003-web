@@ -55,22 +55,27 @@ aside h3::after{content:"";flex:1;height:1px;background:rgba(196,154,82,.45)}
 .certs small{font-size:7.6pt;color:#aeb6c6}
 
 /* ---------- main (left in RTL) ---------- */
-main{flex:1;padding:12mm 11mm 9mm 10mm;display:flex;flex-direction:column}
+main{flex:1;padding:10.5mm 11mm 7mm 10mm;display:flex;flex-direction:column}
 header h1{font-size:30pt;font-weight:700;line-height:1.15;color:var(--navy)}
 header .role{font-size:11pt;font-weight:600;color:var(--gold);margin-top:1mm}
 .orn{display:flex;align-items:center;gap:2mm;margin:3mm 0 0}
 .orn::before,.orn::after{content:"";height:1px;background:var(--line);flex:1}
 .orn::before{flex:0 0 22mm;background:var(--gold);height:1.5px}
 .orn i{width:2.2mm;height:2.2mm;background:var(--gold);transform:rotate(45deg)}
-.sections{flex:1;display:flex;flex-direction:column;justify-content:space-between;margin-top:4mm}
+.sections{flex:1;display:flex;flex-direction:column;justify-content:space-between;gap:1.2mm;margin-top:3mm}
 section h2{font-size:11.6pt;font-weight:700;color:var(--navy);display:flex;align-items:center;gap:2.6mm;margin-bottom:2.4mm}
 section h2::before{content:"";width:2.4mm;height:2.4mm;background:var(--gold);transform:rotate(45deg);flex:none}
 section h2::after{content:"";flex:1;height:1px;background:var(--line)}
 .summary{text-align:justify;color:#2c3445;font-size:9.9pt}
 .tl{position:relative;padding-inline-start:5.5mm}
 .tl::before{content:"";position:absolute;inset-inline-start:1.05mm;top:1.8mm;bottom:1.5mm;width:1px;background:var(--line)}
-.item{position:relative;margin-bottom:3mm}
+.item{position:relative;margin-bottom:2.7mm}
 .item:last-child{margin-bottom:0}
+.item.featured{background:#f3ecdd;border-radius:2mm;padding:1.6mm 2.4mm 1.8mm;margin-inline-start:-1.2mm}
+.item.featured::before{inset-inline-start:-4.3mm}
+.stats{font-size:8.2pt;color:var(--navy);margin-top:.3mm}
+.stats b{color:#a47d3c;font-weight:700}
+.item li b{font-weight:600;color:var(--navy)}
 .item::before{content:"";position:absolute;inset-inline-start:-5.5mm;top:1.5mm;width:2.2mm;height:2.2mm;border-radius:50%;
   border:1.3px solid var(--gold);background:var(--paper)}
 .ihead{display:flex;justify-content:space-between;align-items:baseline;gap:3mm}
@@ -139,53 +144,19 @@ section h2::after{content:"";flex:1;height:1px;background:var(--line)}
   <div class="sections">
   <section>
     <h2>نبذة مهنية</h2>
-    <p class="summary">خريج هندسة حاسوب من جامعة أوسكودار (2026)، متخصص في الذكاء الاصطناعي والذكاء الاصطناعي التوليدي. لدي خبرة في Python والتعلم الآلي والأتمتة بـ n8n وتطوير منصات SaaS، وأسعى لوظيفة مطور ذكاء اصطناعي في السعودية.</p>
-  </section>
-
-  <section>
-    <h2>الخبرات العملية</h2>
-    <div class="tl">
-      <div class="item">
-        <div class="ihead"><h3>&nbsp;مندوب مبيعات</h3><span class="date">أكتوبر 2026 – الآن</span></div>
-        <div class="org">جايكم — حلول تقنية للمطاعم والمقاهي · الرياض</div>
-        <ul><li>عرض الحلول التقنية على أصحاب المطاعم والمقاهي، من أنظمة نقاط البيع والطلبات وغيرها من الأنظمة.</li></ul>
-      </div>
-      <div class="item">
-        <div class="ihead"><h3>&nbsp;متدرب أجهزة وبرمجيات</h3><span class="date">يونيو 2024 – فبراير 2025</span></div>
-        <div class="org">شركة الصندوق الآمن الأمنية · الرياض</div>
-        <ul><li>تركيب وصيانة الأجهزة الأمنية وبرمجياتها ضمن مشاريع حكومية.</li></ul>
-      </div>
-      <div class="item">
-        <div class="ihead"><h3>&nbsp;أمين مستودع</h3><span class="date">2020 – 2021</span></div>
-        <div class="org">نظارات الجميل · الرياض</div>
-        <ul><li>إدارة المخزون وسجلاته.</li></ul>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>عمل حر</h2>
-    <div class="tl">
-      <div class="item">
-        <div class="ihead"><h3>&nbsp;لمحة تك (Lamha Tech)</h3><span class="date">حتى الآن</span></div>
-        <div class="org">تطوير مواقع وأنظمة أتمتة وحجز للشركات الصغيرة</div>
-        <ul>
-          <li>العملاء: شركة الصندوق الآمن الأمنية · نظارات الجميل · مؤسسة ثلاثة فنون للمقاولات.</li>
-          <li>موقع إلكتروني عربي متجاوب لمؤسسة ثلاثة فنون للمقاولات <span class="stack">(HTML · CSS · JavaScript)</span>.</li>
-        </ul>
-      </div>
-    </div>
+    <p class="summary">خريج هندسة حاسوب (أوسكودار، 2026) أبني منتجات برمجية كاملة، من منصة توصيل بأربع تطبيقات إلى أتمتة واتساب ومنصة ولاء SaaS ومشاريع تعلم آلي. أسعى لوظيفة مطور ذكاء اصطناعي في السعودية.</p>
   </section>
 
   <section>
     <h2>أبرز المشاريع</h2>
     <div class="tl">
-      <div class="item">
+      <div class="item featured">
         <div class="ihead"><h3>&nbsp;تلة (Talla) — منصة توصيل متكاملة</h3><span class="date">2026</span></div>
         <div class="stack"><span class="ltr">TypeScript · JavaScript · Supabase · PostgreSQL · PWA · Capacitor</span></div>
+        <div class="stats"><span class="ltr"><b>133</b> commits · <b>47</b> DB migrations · <b>7</b> edge functions</span></div>
         <ul>
-          <li>تصميم وبناء منصة توصيل لمدينة التل في سوريا بأربع واجهات: تطبيق الزبون، ولوحة المتجر، وتطبيق السائق، ولوحة الإدارة، على خلفية PostgreSQL مؤمنة.</li>
-          <li>133 commit و47 عملية ترحيل لقاعدة البيانات و7 دوال Edge Functions.</li>
+          <li>تصميم وبناء منصة توصيل كاملة لمدينة التل في سوريا على خلفية PostgreSQL مؤمنة.</li>
+          <li><b>الزبون:</b> تصفح وطلب وتتبع · <b>المتجر:</b> الطلبات والقائمة والسائقين · <b>السائق:</b> استلام وتوصيل وتحصيل نقدي · <b>الإدارة:</b> الإيرادات والمتاجر والطلبات.</li>
         </ul>
       </div>
       <div class="item">
@@ -202,6 +173,40 @@ section h2::after{content:"";flex:1;height:1px;background:var(--line)}
         <h3 class="ihead"><span>منصة ولاء رقمية SaaS — شريك مؤسس</span></h3>
         <div class="stack"><span class="ltr">Apple Wallet · Google Wallet · Supabase</span></div>
         <ul><li>بطاقات ولاء رقمية على الجوال للمقاهي والصالونات ومغاسل السيارات.</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>عمل حر</h2>
+    <div class="tl">
+      <div class="item">
+        <div class="ihead"><h3>&nbsp;لمحة تك (Lamha Tech)</h3><span class="date">حتى الآن</span></div>
+        <div class="org">تطوير مواقع وأنظمة أتمتة وحجز للشركات الصغيرة</div>
+        <ul>
+          <li>العملاء: شركة الصندوق الآمن الأمنية · نظارات الجميل · مؤسسة ثلاثة فنون للمقاولات (موقع عربي متجاوب بـ <span class="ltr">HTML · CSS · JavaScript</span>).</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>الخبرات العملية</h2>
+    <div class="tl">
+      <div class="item">
+        <div class="ihead"><h3>&nbsp;مندوب مبيعات</h3><span class="date">أكتوبر 2026 – الآن</span></div>
+        <div class="org">جايكم — حلول تقنية للمطاعم والمقاهي · الرياض</div>
+        <ul><li>عرض حلول تقنية (نقاط البيع والطلبات والأنظمة) على أصحاب المطاعم والمقاهي.</li></ul>
+      </div>
+      <div class="item">
+        <div class="ihead"><h3>&nbsp;متدرب أجهزة وبرمجيات</h3><span class="date">يونيو 2024 – فبراير 2025</span></div>
+        <div class="org">شركة الصندوق الآمن الأمنية · الرياض</div>
+        <ul><li>تركيب وصيانة الأجهزة الأمنية وبرمجياتها ضمن مشاريع حكومية.</li></ul>
+      </div>
+      <div class="item">
+        <div class="ihead"><h3>&nbsp;أمين مستودع</h3><span class="date">2020 – 2021</span></div>
+        <div class="org">نظارات الجميل · الرياض</div>
+        <ul><li>إدارة المخزون وسجلاته.</li></ul>
       </div>
     </div>
   </section>

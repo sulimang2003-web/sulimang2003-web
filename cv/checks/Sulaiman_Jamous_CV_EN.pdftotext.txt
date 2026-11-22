@@ -3,26 +3,25 @@ AI Developer | Computer Engineering Graduate
 Riyadh, Saudi Arabia | +966 54 108 3813 | sulimang2003@gmail.com | linkedin.com/in/sulaiman-jamous-2699321a3
 
 SUMMARY
-Computer Engineering graduate from Üsküdar University (2026) specializing in artificial intelligence and generative AI.
-Experienced in Python, machine learning, workflow automation with n8n, and SaaS platform development. Seeking an
-AI Developer role in Saudi Arabia.
+Computer Engineering graduate (Üsküdar University, 2026) who builds complete software products, from a four-app
+delivery platform to WhatsApp automation and a loyalty SaaS, plus machine learning projects in Python. Seeking an AI
+Developer role in Saudi Arabia.
 
-EXPERIENCE
-Sales Representative, Jaykum (Tech Solutions for Restaurants and Cafés), Riyadh
+PROJECTS
+Talla, Full-Stack Delivery Platform | TypeScript, JavaScript, Supabase, PostgreSQL, PWA, Capacitor
 
-October 2026 – Present
+2026
 
-Presented technology solutions, including point-of-sale, ordering, and other systems, to restaurant and café owners.
-Hardware and Software Trainee, Al-Sanduq Al-Amen Security Company, Riyadh
-
-June 2024 – February 2025
-
-Installed and maintained security devices and their software for government projects.
-Warehouse Keeper, Al-Jameel Optics, Riyadh
-
-2020 – 2021
-
-Managed inventory and stock records.
+Designed and built an end-to-end delivery platform for Al-Tall, Syria, on a secured PostgreSQL backend: 133
+commits, 47 database migrations, and 7 edge functions.
+Customer app (browse, order, track), shop dashboard (orders, menu, drivers), driver app (pickup, delivery, cash
+collection), and admin panel (revenue, shops, orders).
+AI Job Market Analysis | Python, pandas, scikit-learn, FastAPI
+Analyzed AI job postings and matched resumes to jobs using machine learning.
+WhatsApp Subscription Renewal Reminders | n8n, WhatsApp Cloud API, Supabase, PostgreSQL, Hetzner
+Automated WhatsApp reminders sent before subscription expiry, with a manual approval queue.
+Digital Loyalty SaaS Platform, Co-Founder | Apple Wallet, Google Wallet, Supabase
+Mobile digital loyalty cards for cafés, salons, and car washes.
 
 FREELANCE
 Lamha Tech, Freelance
@@ -33,20 +32,22 @@ Develop websites, automation, and booking systems for small businesses.
 Clients: Al-Sanduq Al-Amen Security Company, Al-Jameel Optics, Thalatha Funoon Contracting.
 Built a responsive Arabic website for Thalatha Funoon Contracting using HTML, CSS, and JavaScript.
 
-PROJECTS
-Talla, Full-Stack Delivery Platform | TypeScript, JavaScript, Supabase, PostgreSQL, PWA, Capacitor
+EXPERIENCE
+Sales Representative, Jaykum (Tech Solutions for Restaurants and Cafés), Riyadh
 
-2026
+October 2026 – Present
 
-Designed and built a delivery platform for Al-Tall, Syria, with four apps: customer app, shop dashboard, driver app,
-and admin panel, on a secured PostgreSQL backend.
-133 commits, 47 database migrations, and 7 edge functions.
-AI Job Market Analysis | Python, pandas, scikit-learn, FastAPI
-Analyzed AI job postings and matched resumes to jobs using machine learning.
-WhatsApp Subscription Renewal Reminders | n8n, WhatsApp Cloud API, Supabase, PostgreSQL, Hetzner
-Automated WhatsApp reminders sent before subscription expiry, with a manual approval queue.
-Digital Loyalty SaaS Platform, Co-Founder | Apple Wallet, Google Wallet, Supabase
-Mobile digital loyalty cards for cafés, salons, and car washes.
+Presented tech solutions (point-of-sale, ordering, and other systems) to restaurant and café owners.
+Hardware and Software Trainee, Al-Sanduq Al-Amen Security Company, Riyadh
+
+June 2024 – February 2025
+
+Installed and maintained security devices and their software for government projects.
+Warehouse Keeper, Al-Jameel Optics, Riyadh
+
+2020 – 2021
+
+Managed inventory and stock records.
 
 EDUCATION
 B.Sc. in Computer Engineering, Üsküdar University, Istanbul, Turkey
