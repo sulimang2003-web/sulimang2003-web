@@ -15,6 +15,8 @@ const securityHeaders = [
 const nextConfig: NextConfig = {
   poweredByHeader: false,
   images: {
+    // Cloudflare Workers has no built-in Next image optimizer; serve originals there.
+    unoptimized: process.env.CF_PAGES_BUILD === "1",
     formats: ["image/avif", "image/webp"],
     dangerouslyAllowSVG: true,
     contentDispositionType: "attachment",

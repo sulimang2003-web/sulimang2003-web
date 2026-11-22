@@ -11,3 +11,6 @@ next-env.d.ts
 .vercel
 .frames
 .netlify
+.open-next
+.wrangler
+.dev.vars
