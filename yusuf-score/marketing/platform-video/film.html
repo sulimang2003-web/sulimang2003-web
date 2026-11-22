@@ -3,21 +3,25 @@
 <head>
 <meta charset="utf-8">
 <title>YUSUF SCORE — Platform Film</title>
-<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=IBM+Plex+Sans+Arabic:wght@300;400;500&family=Jost:wght@300;400;500&display=block" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Playfair+Display:wght@500;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=IBM+Plex+Sans+Arabic:wght@300;400;500&family=Jost:wght@300;400;500&display=block" rel="stylesheet">
 <style>
-  :root { --ink:#0e0e0d; --ivory:#f6f1e8; --gold:#b8995a; --gold2:#d2b87f; --stone:#a39a8a; --smoke:#8f887d; }
+  :root { --ink:#0d1014; --ivory:#ececec; --gold:#c4c6c9; --gold2:#e3e4e6; --stone:#9a9da2; --smoke:#8b8e93; }
   * { margin:0; padding:0; box-sizing:border-box; }
   html, body { width:1920px; height:1080px; overflow:hidden; background:var(--ink); }
   #stage { position:relative; width:1920px; height:1080px; overflow:hidden; color:var(--ivory);
-    background:radial-gradient(110% 90% at 30% 40%, #1d1b18 0%, #0e0e0d 55%, #060606 100%); font-family:"Jost","IBM Plex Sans Arabic",sans-serif; }
+    background:#1f2124 url(assets/backdrop.webp) center/cover no-repeat; font-family:"Jost","IBM Plex Sans Arabic",sans-serif; }
   .abs { position:absolute; }
   .scene { position:absolute; inset:0; opacity:0; }
-  .glow { inset:0; background:radial-gradient(40% 40% at 50% 50%, rgba(200,169,106,.20), rgba(200,169,106,0) 70%); }
+  .glow { inset:0; background:radial-gradient(40% 40% at 50% 45%, rgba(255,255,255,.09), rgba(255,255,255,0) 70%); }
   .grain { inset:0; opacity:.06; mix-blend-mode:overlay; background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>"); }
   .vignette { inset:0; background:radial-gradient(85% 80% at 50% 50%, transparent 60%, rgba(0,0,0,.6) 100%); }
-  .frame { inset:34px; border:1px solid rgba(184,153,90,.25); }
-  .gline { height:1.5px; background:linear-gradient(90deg, transparent, var(--gold), transparent); transform-origin:center; }
-  .wordmark { font-family:"Cormorant Garamond",serif; font-size:112px; white-space:nowrap; direction:ltr; }
+  .frame { inset:34px; border:1px solid rgba(255,255,255,.1); border-radius:22px; }
+  .gline { height:1.5px; background:linear-gradient(90deg, transparent, #d9dadc, transparent); transform-origin:center; }
+  .logo { position:absolute; border-radius:50%; }
+  .silver { background:linear-gradient(180deg,#f2f2f2 0%,#b9bbbe 60%,#8e9094 100%); -webkit-background-clip:text; background-clip:text; color:transparent; padding-bottom:.15em; }
+  .soc { display:inline-flex; flex-direction:column; align-items:center; gap:12px; margin:0 20px; font-family:"Jost"; font-size:20px; color:#e9e9e9; }
+  .soc i { width:82px; height:82px; border-radius:50%; background:#0d1014; display:grid; place-items:center; box-shadow:inset 0 0 0 1px rgba(255,255,255,.08); }
+  .wordmark { font-family:"Playfair Display",serif; font-weight:700; font-size:86px; white-space:nowrap; direction:ltr; }
   .wordmark span { display:inline-block; }
   .sub { font-size:20px; letter-spacing:.62em; color:var(--gold); direction:ltr; }
   .center { left:0; right:0; text-align:center; }
@@ -28,37 +32,37 @@
   .tr { font-family:"Cormorant Garamond",serif; font-style:italic; font-size:32px; color:#cfc6b6; direction:ltr; text-align:right; margin-top:14px; }
   .p { font-family:"IBM Plex Sans Arabic",sans-serif; font-weight:300; font-size:25px; line-height:1.85; color:#bdb5a8; margin-top:26px; }
   .bul { font-family:"IBM Plex Sans Arabic",sans-serif; font-size:24px; color:#e8e1d4; margin-top:16px; display:flex; gap:14px; align-items:center; justify-content:flex-start; }
-  .bul i { width:8px; height:8px; background:var(--gold); transform:rotate(45deg); display:inline-block; flex:none; }
+  .bul i { width:8px; height:8px; background:#d9dadc; border-radius:50%; transform:rotate(45deg); display:inline-block; flex:none; }
   /* browser */
-  .browser { width:1060px; border-radius:16px; overflow:hidden; background:#151413; box-shadow:0 50px 110px rgba(0,0,0,.65), 0 0 0 1px rgba(255,255,255,.06); }
-  .bar { height:46px; display:flex; align-items:center; gap:9px; padding:0 18px; background:#1d1c1a; border-bottom:1px solid #2a2826; direction:ltr; }
-  .bar b { width:12px; height:12px; border-radius:50%; background:#3a3835; display:inline-block; }
-  .url { margin-left:18px; flex:1; max-width:520px; height:28px; border-radius:14px; background:#121110; color:#8f887d; font-size:14px; display:flex; align-items:center; padding:0 14px; gap:8px; letter-spacing:.04em; }
+  .browser { width:1060px; border-radius:18px; overflow:hidden; background:#0d1014; box-shadow:0 50px 110px rgba(0,0,0,.65), 0 0 0 1px rgba(255,255,255,.06); }
+  .bar { height:46px; display:flex; align-items:center; gap:9px; padding:0 18px; background:#16181b; border-bottom:1px solid #26282c; direction:ltr; }
+  .bar b { width:12px; height:12px; border-radius:50%; background:#3a3c40; display:inline-block; }
+  .url { margin-left:18px; flex:1; max-width:520px; height:28px; border-radius:14px; background:#0d1014; color:#8b8e93; font-size:14px; display:flex; align-items:center; padding:0 14px; gap:8px; letter-spacing:.04em; }
   .view { position:relative; height:640px; overflow:hidden; background:#fbf8f2; }
   .view img { position:absolute; left:0; top:0; width:1060px; }
   /* phone */
-  .phone { width:360px; height:740px; border-radius:58px; background:#050505; padding:13px; box-shadow:0 40px 90px rgba(0,0,0,.65), 0 0 0 1.5px #2c2a27; }
+  .phone { width:360px; height:740px; border-radius:58px; background:#0d1014; padding:13px; box-shadow:0 40px 90px rgba(0,0,0,.65), 0 0 0 1.5px #2c2a27; }
   .screen { position:relative; width:100%; height:100%; border-radius:46px; overflow:hidden; background:#fbf8f2; }
   .screen img { position:absolute; left:0; top:0; width:334px; }
   .notch { position:absolute; top:10px; left:50%; width:96px; height:28px; margin-left:-48px; border-radius:16px; background:#050505; z-index:3; }
   .tag { font-family:"IBM Plex Sans Arabic",sans-serif; font-size:20px; color:var(--gold2); letter-spacing:.04em; text-align:center; }
   /* whatsapp card */
-  .wa { width:470px; border-radius:22px; overflow:hidden; background:#efe9de; box-shadow:0 40px 90px rgba(0,0,0,.6); direction:rtl; }
-  .wa-h { background:#1f3b2d; color:#f6f1e8; display:flex; align-items:center; gap:14px; padding:18px 22px; font-family:"IBM Plex Sans Arabic"; font-size:21px; }
-  .wa-av { width:46px; height:46px; border-radius:50%; background:#0e0e0d; color:var(--gold); font-family:"Cormorant Garamond"; font-size:22px; display:grid; place-items:center; }
+  .wa { width:470px; border-radius:22px; overflow:hidden; background:#2a2c30; box-shadow:0 40px 90px rgba(0,0,0,.6); direction:rtl; }
+  .wa-h { background:#0d1014; color:#f6f1e8; display:flex; align-items:center; gap:14px; padding:18px 22px; font-family:"IBM Plex Sans Arabic"; font-size:21px; }
+  .wa-av { width:46px; height:46px; border-radius:50%; background:url(assets/ys-logo-circle.png) center/cover; color:transparent; }
   .wa-b { padding:24px 22px 28px; }
   .bubble { background:#fff; color:#1c1b1a; border-radius:14px 2px 14px 14px; padding:18px 20px; font-family:"IBM Plex Sans Arabic"; font-size:19px; line-height:1.75; box-shadow:0 2px 0 rgba(0,0,0,.06); }
   .bubble div { white-space:nowrap; }
   .ok { margin-top:14px; margin-left:auto; width:fit-content; background:#d9ead3; color:#1f3b2d; border-radius:2px 14px 14px 14px; padding:12px 18px; font-family:"IBM Plex Sans Arabic"; font-size:19px; }
   .card { border-radius:14px; overflow:hidden; box-shadow:0 40px 90px rgba(0,0,0,.6), 0 0 0 1px rgba(255,255,255,.06); background:#f3efe7; }
   .card img { display:block; width:100%; }
-  .chip { position:absolute; background:var(--ink); color:var(--ivory); border:1px solid rgba(184,153,90,.6); padding:12px 22px; font-family:"IBM Plex Sans Arabic"; font-size:22px; direction:rtl; white-space:nowrap; }
+  .chip { position:absolute; border-radius:999px; background:rgba(13,16,20,.88); color:var(--ivory); border:1px solid rgba(255,255,255,.3); padding:12px 22px; font-family:"IBM Plex Sans Arabic"; font-size:22px; direction:rtl; white-space:nowrap; }
   .callout { position:absolute; border:2px solid var(--gold); border-radius:10px; box-shadow:0 0 0 9999px rgba(14,14,13,.0); }
-  .feat { width:360px; height:190px; border:1px solid rgba(184,153,90,.3); padding:30px 30px; direction:rtl; text-align:right; background:rgba(255,255,255,.015); }
+  .feat { width:360px; height:190px; border-radius:22px; border:1px solid rgba(255,255,255,.1); padding:30px 30px; direction:rtl; text-align:right; background:rgba(30,32,36,.55); }
   .feat .n { font-family:"Cormorant Garamond"; color:var(--gold); font-size:26px; direction:ltr; text-align:right; }
   .feat .t { font-family:"IBM Plex Sans Arabic"; font-size:27px; margin-top:14px; }
   .feat .s { font-family:"Cormorant Garamond"; font-style:italic; font-size:22px; color:var(--stone); direction:ltr; text-align:right; margin-top:4px; }
-  .mono { font-family:"Cormorant Garamond",serif; font-size:900px; line-height:1; color:transparent; -webkit-text-stroke:1.2px rgba(210,184,127,.10); direction:ltr; }
+  .mono { font-family:"Cormorant Garamond",serif; font-size:900px; line-height:1; color:transparent; -webkit-text-stroke:1.2px rgba(255,255,255,.05); direction:ltr; }
 </style>
 </head>
 <body>
@@ -68,10 +72,11 @@
 
   <!-- S1 intro -->
   <div class="scene" id="s1">
-    <div class="abs center" style="top:390px"><div class="wordmark" id="wm"></div></div>
-    <div class="abs gline" id="s1line" style="top:540px; left:560px; right:560px"></div>
-    <div class="abs center sub" id="s1sub" style="top:570px; padding-left:.62em">ISTANBUL · FATIH</div>
-    <div class="abs center" id="s1cap" style="top:690px">
+    <img class="logo" id="s1logo" src="assets/ys-logo-circle.png" style="left:820px; top:120px; width:280px; height:280px" alt="">
+    <div class="abs center" style="top:450px"><div class="wordmark" id="wm"></div></div>
+    <div class="abs gline" id="s1line" style="top:575px; left:600px; right:600px"></div>
+    <div class="abs center sub" id="s1sub" style="top:600px; padding-left:.62em">FOR MEN</div>
+    <div class="abs center" id="s1cap" style="top:700px">
       <div style="font-family:'IBM Plex Sans Arabic'; font-weight:300; font-size:36px" dir="rtl">منصة تجارة إلكترونية متكاملة — متجر ولوحة إدارة</div>
       <div style="font-family:'Cormorant Garamond'; font-style:italic; font-size:30px; color:#a39a8a; margin-top:10px">Storefront · Admin · WhatsApp · Mobile App</div>
     </div>
@@ -85,9 +90,9 @@
     </div>
     <div class="abs col" id="c2" style="top:270px">
       <div class="chap">01 — STORE</div>
-      <div class="h">واجهة متجر فاخرة</div>
+      <div class="h silver">واجهة متجر فاخرة</div>
       <div class="tr">A storefront worthy of the brand</div>
-      <div class="p">تصميم هادئ بالأسود والعاجي ولمسات ذهبية، صور كبيرة، وحركة ناعمة — ليعكس قيمة العلامة من أول نظرة.</div>
+      <div class="p">تصميم داكن بخلفية ضبابية ولمسات فضية، بنفس هوية الشعار — صور كبيرة وحركة ناعمة تعكس قيمة العلامة من أول نظرة.</div>
     </div>
   </div>
 
@@ -97,7 +102,7 @@
     <div class="abs" id="ph2" style="left:640px; top:150px"><div class="phone"><div class="screen"><div class="notch"></div><img id="i3b" src="assets/m-home-tr.png" alt=""></div></div><div class="tag" style="margin-top:22px">Türkçe · LTR</div></div>
     <div class="abs col" id="c3" style="top:270px">
       <div class="chap">02 — MOBILE FIRST</div>
-      <div class="h">تجربة جوال بلغتين</div>
+      <div class="h silver">تجربة جوال بلغتين</div>
       <div class="tr">Arabic &amp; Turkish, built for the phone</div>
       <div class="bul" id="b3a"><i></i>تبديل كامل لاتجاه الواجهة RTL / LTR</div>
       <div class="bul" id="b3b"><i></i>قابل للتثبيت كتطبيق على الهاتف (PWA)</div>
@@ -124,7 +129,7 @@
     </div>
     <div class="abs col" id="c4" style="top:250px">
       <div class="chap">03 — WHATSAPP</div>
-      <div class="h">من الإعجاب إلى الطلب</div>
+      <div class="h silver">من الإعجاب إلى الطلب</div>
       <div class="tr">From a story view to a confirmed order</div>
       <div class="p">الزائر يختار المقاس واللون، فتصل رسالة جاهزة بالاسم والكود والسعر إلى واتساب المتجر — ويُسجَّل الطلب ويُحجز المخزون تلقائياً.</div>
     </div>
@@ -141,7 +146,7 @@
     <div class="chip" id="k3" style="left:640px; top:640px">أحدث الطلبات</div>
     <div class="abs col" id="c5" style="top:270px">
       <div class="chap">04 — DASHBOARD</div>
-      <div class="h">لوحة إدارة متكاملة</div>
+      <div class="h silver">لوحة إدارة متكاملة</div>
       <div class="tr">Every sale, every source, at a glance</div>
       <div class="p">المبيعات، الطلبات بانتظار التأكيد، المنتجات الأكثر طلباً، المخزون المنخفض، ومن أين جاء كل عميل.</div>
     </div>
@@ -154,7 +159,7 @@
     <div class="abs card" id="m3" style="left:110px; top:150px; width:1060px"><img src="assets/admin-settings-main.png" alt=""></div>
     <div class="abs col" id="c6" style="top:250px">
       <div class="chap">05 — CONTROL</div>
-      <div class="h">كل شيء تحت السيطرة</div>
+      <div class="h silver">كل شيء تحت السيطرة</div>
       <div class="tr">Products, orders, shipping, campaigns</div>
       <div class="bul" id="b6a"><i></i>المنتجات والصور والمخزون لكل مقاس ولون</div>
       <div class="bul" id="b6b"><i></i>الطلبات، حالة الشحن، ومراسلة العميل بنقرة</div>
@@ -166,7 +171,7 @@
   <div class="scene" id="s7">
     <div class="abs center" id="c7" style="top:120px">
       <div class="chap" style="text-align:center">THE PLATFORM</div>
-      <div class="h" style="margin-top:6px">مبني ليكبر مع العلامة</div>
+      <div class="h silver" style="margin-top:6px">مبني ليكبر مع العلامة</div>
     </div>
     <div class="abs" id="grid" style="left:160px; top:380px; width:1600px; display:grid; grid-template-columns:repeat(4, 1fr); gap:26px; direction:rtl">
       <div class="feat"><div class="n">01</div><div class="t">عربي + تركي</div><div class="s">Bilingual RTL / LTR</div></div>
@@ -182,11 +187,16 @@
 
   <!-- S8 end -->
   <div class="scene" id="s8">
-    <div class="abs center" id="e1" style="top:360px"><div class="wordmark" style="letter-spacing:.32em; padding-left:.32em; font-size:104px">YUSUF SCORE</div></div>
-    <div class="abs center sub" id="e2" style="top:505px; padding-left:.62em">ISTANBUL · FATIH</div>
-    <div class="abs gline" id="e3" style="top:575px; left:660px; right:660px"></div>
-    <div class="abs center" id="e4" style="top:630px; font-family:'Amiri'; font-size:46px" dir="rtl">متجرك الرقمي — بنفس فخامة متجرك في الفاتح</div>
-    <div class="abs center" id="e5" style="top:720px; font-family:'Jost'; font-size:28px; letter-spacing:.14em; color:#d2b87f">@yusufscore</div>
+    <img class="logo" id="e1" src="assets/ys-logo-circle.png" style="left:830px; top:110px; width:260px; height:260px" alt="">
+    <div class="abs center" id="e2" style="top:410px"><div class="wordmark" style="letter-spacing:.3em; padding-left:.3em; font-size:64px">YUSUF SCORE</div></div>
+    <div class="abs center sub" id="e2b" style="top:500px; padding-left:.62em">FOR MEN</div>
+    <div class="abs gline" id="e3" style="top:550px; left:700px; right:700px"></div>
+    <div class="abs center silver" id="e4" style="top:580px; font-family:'Amiri'; font-size:44px" dir="rtl">متجرك الرقمي — بنفس فخامة متجرك في الفاتح</div>
+    <div class="abs center" id="e5" style="top:700px; direction:ltr">
+      <span class="soc" id="so1"><i><svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#f0f0f0" stroke-width="1.4"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="#f0f0f0"/></svg></i>@yusufscore</span>
+      <span class="soc" id="so2"><i><svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#f0f0f0" stroke-width="1.4"><path d="M20 11.6a8 8 0 0 1-11.8 7L4 20l1.4-4.1A8 8 0 1 1 20 11.6Z"/></svg></i>WhatsApp</span>
+      <span class="soc" id="so3"><i><svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#f0f0f0" stroke-width="1.4"><path d="M12 21s-6.5-5.7-6.5-11a6.5 6.5 0 1 1 13 0c0 5.3-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.3"/></svg></i>Fatih, İstanbul</span>
+    </div>
   </div>
 
   <div class="abs frame" id="frame"></div>
@@ -223,9 +233,11 @@
     for (const [id, [a, b]] of Object.entries(S)) $(id).style.opacity = win(t, a, b, .55);
 
     // S1
-    const sp = .62 - .3 * oc(p(t, .6, 3.4));
+    const sp = .5 - .18 * oc(p(t, 1.2, 3.4));
     $("wm").style.letterSpacing = sp + "em"; $("wm").style.paddingLeft = sp + "em";
-    letters.forEach((el, i) => { const k = oc(p(t, .6 + i * .08, 1.4 + i * .08)); el.style.opacity = k; el.style.filter = `blur(${(1 - k) * 12}px)`; el.style.transform = `translateY(${(1 - k) * 22}px)`; });
+    letters.forEach((el, i) => { const k = oc(p(t, 1.1 + i * .07, 1.9 + i * .07)); el.style.opacity = k; el.style.filter = `blur(${(1 - k) * 12}px)`; el.style.transform = `translateY(${(1 - k) * 22}px)`; });
+    const lk = oc(p(t, .2, 1.5));
+    set("s1logo", lk, `scale(${.86 + .14 * lk})`, { filter: `blur(${(1 - lk) * 12}px)` });
     $("s1line").style.transform = `scaleX(${ox(p(t, 1.6, 2.8))})`;
     $("s1sub").style.opacity = oc(p(t, 2.2, 3));
     rise("s1cap", t, 2.8, .9, 26);
@@ -285,10 +297,11 @@
 
     // S8 end
     const e = oc(p(t, 43.4, 44.6));
-    set("e1", e, "", { filter: `blur(${(1 - e) * 10}px)` });
-    $("e2").style.opacity = oc(p(t, 44, 44.8));
-    $("e3").style.transform = `scaleX(${ox(p(t, 44.2, 45.4))})`;
-    rise("e4", t, 44.6, .8, 20); rise("e5", t, 45.1, .8, 14);
+    set("e1", e, `scale(${.86 + .14 * e})`, { filter: `blur(${(1 - e) * 10}px)` });
+    rise("e2", t, 43.9, .8, 16); $("e2b").style.opacity = oc(p(t, 44.2, 44.9));
+    $("e3").style.transform = `scaleX(${ox(p(t, 44.3, 45.4))})`;
+    rise("e4", t, 44.6, .8, 16); $("e5").style.opacity = 1;
+    ["so1", "so2", "so3"].forEach((id, i) => rise(id, t, 45 + i * .18, .7, 20));
   }
   window.render = render; window.DURATION = DURATION;
   render(0);
